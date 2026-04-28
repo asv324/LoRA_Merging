@@ -1,0 +1,119 @@
+{
+  "step": "step_4_2_experiment_12_task_arithmetic_in_aligned_space",
+  "results_root": "results/ablation_ta_aligned",
+  "lambda": 1.0,
+  "reference": {
+    "variant_label": "Task Arithmetic (unaligned)",
+    "result_path": "results/best_hparams.json",
+    "lambda": 1.0,
+    "average_primary_score": 0.6931674335536465,
+    "per_task_primary": {
+      "sst2": {
+        "metric": "accuracy",
+        "value": 0.9151376146788991
+      },
+      "mnli": {
+        "metric": "accuracy",
+        "value": 0.845746306673459
+      },
+      "qnli": {
+        "metric": "accuracy",
+        "value": 0.8403807431814022
+      },
+      "cola": {
+        "metric": "matthews_correlation",
+        "value": 0.1930923588301401
+      },
+      "rte": {
+        "metric": "accuracy",
+        "value": 0.6714801444043321
+      }
+    }
+  },
+  "variants": {
+    "gpa_aligned_ta": {
+      "variant_label": "gpa_aligned_ta",
+      "result_path": "results/ablation_ta_aligned/gpa_aligned_ta.json",
+      "lambda": 1.0,
+      "b_weight_alpha": 0.0,
+      "normalise_a_factors": false,
+      "average_primary_score": 0.6923566438154761,
+      "per_task_primary": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.9151376146788991
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.845746306673459
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.8400146439685154
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.18940450935217487
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.6714801444043321
+        }
+      },
+      "delta_vs_task_arithmetic": {
+        "reference_variant_label": "Task Arithmetic (unaligned)",
+        "average_primary_score_delta": -0.0008107897381703921,
+        "per_task_delta": {
+          "sst2": 0.0,
+          "mnli": 0.0,
+          "qnli": -0.0003660992128867724,
+          "cola": -0.003687849477965216,
+          "rte": 0.0
+        },
+        "positive_task_count": 0
+      }
+    },
+    "enhanced_gpa_aligned_ta": {
+      "variant_label": "enhanced_gpa_aligned_ta",
+      "result_path": "results/ablation_ta_aligned/enhanced_gpa_aligned_ta.json",
+      "lambda": 1.0,
+      "b_weight_alpha": 0.5,
+      "normalise_a_factors": true,
+      "average_primary_score": 0.8015164024654311,
+      "per_task_primary": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.9311926605504587
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.8483953132959755
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.8564891085484166
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.5159092620622691
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.855595667870036
+        }
+      },
+      "delta_vs_task_arithmetic": {
+        "reference_variant_label": "Task Arithmetic (unaligned)",
+        "average_primary_score_delta": 0.10834896891178458,
+        "per_task_delta": {
+          "sst2": 0.016055045871559592,
+          "mnli": 0.0026490066225165476,
+          "qnli": 0.016108365367014432,
+          "cola": 0.32281690323212897,
+          "rte": 0.18411552346570392
+        },
+        "positive_task_count": 5
+      }
+    }
+  }
+}

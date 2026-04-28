@@ -1,0 +1,80 @@
+{
+  "experiment": "vram_profile",
+  "timestamp_utc": "2026-04-02T18:09:25.370620+00:00",
+  "model_name": "Qwen/Qwen2.5-1.5B",
+  "device": {
+    "requested_device": "cuda:0",
+    "device_name": "NVIDIA RTX 6000 Ada Generation",
+    "torch_version": "2.6.0+cu124",
+    "cuda_available": true,
+    "cuda_device_count": 1
+  },
+  "profiling_config": {
+    "batch_size": 32,
+    "sequence_length": 256,
+    "total_gpu_memory_gb": 48.0,
+    "padding": {
+      "pad_token_id": 151643,
+      "pad_token_source": "fallback_from_eos_or_zero",
+      "original_pad_token_id": null,
+      "eos_token_id": 151643
+    },
+    "quantization": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_compute_dtype": "float16",
+      "bnb_4bit_use_double_quant": true
+    },
+    "lora": {
+      "r": 16,
+      "lora_alpha": 32,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "lora_dropout": 0.05,
+      "bias": "none",
+      "task_type": "SEQ_CLS"
+    }
+  },
+  "base_model": {
+    "load_seconds": 1.6563781201839447,
+    "allocated_gb": 1.152326144,
+    "reserved_gb": 1.17440512,
+    "peak_allocated_gb": 1.177703424,
+    "peak_reserved_gb": 1.201668096
+  },
+  "lora_model": {
+    "total_parameters": 907087360,
+    "trainable_parameters": 18467840,
+    "allocated_gb": 1.692323328,
+    "reserved_gb": 1.715470336,
+    "peak_allocated_gb": 2.085820928,
+    "peak_reserved_gb": 2.183135232
+  },
+  "reference_training_step": {
+    "status": "ok",
+    "batch_size": 32,
+    "sequence_length": 256,
+    "loss": 1.4361457824707031,
+    "elapsed_seconds": 7.194939166307449,
+    "allocated_gb": 1.884292096,
+    "reserved_gb": 6.12368384,
+    "peak_allocated_gb": 5.614751232,
+    "peak_reserved_gb": 6.12368384,
+    "within_target": true
+  },
+  "summary": {
+    "remaining_headroom_gb": 42.385248768,
+    "within_expected_peak_range": false,
+    "expected_peak_range_gb": {
+      "peak_vram_gb_min": 3.0,
+      "peak_vram_gb_max": 5.0
+    }
+  }
+}

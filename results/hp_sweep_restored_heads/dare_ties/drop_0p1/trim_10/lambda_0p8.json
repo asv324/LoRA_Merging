@@ -1,0 +1,2720 @@
+{
+  "method": "dare_adapter_sparsification",
+  "source_tasks": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "merge_methods": [
+    "ties"
+  ],
+  "drop_probabilities": [
+    0.1
+  ],
+  "lambda_values": [
+    0.8
+  ],
+  "trim_percentages": [
+    10
+  ],
+  "majority_sign_method": "total",
+  "seed": 42,
+  "runs": [
+    {
+      "merge_method": "ties",
+      "drop_probability": 0.1,
+      "trim_percentage": 10,
+      "density": 0.9,
+      "lambda": 0.8,
+      "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+      "sparsified_summary": {
+        "avg_nonzero_fraction_lora_A": 0.9000584510516149,
+        "avg_nonzero_fraction_lora_B": 0.9000483712979725
+      },
+      "module_summaries": [
+        {
+          "module_name": "base_model.model.model.layers.0.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.323287487030029,
+          "nonzero_fraction_lora_A": 0.9999790787696838,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 7.1662821769714355,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 7.063956260681152,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9278402328491211,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.268184185028076,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.703472137451172,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.0.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8254523873329163,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 9.835378646850586,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.8025689125061035,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.4694414138793945,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.015173077583313,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.190340757369995,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.6204116344451904,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.1.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8914642333984375,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.096704006195068,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.431503772735596,
+          "nonzero_fraction_lora_A": 0.9998779296875,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.236465930938721,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9068858623504639,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.1126515865325928,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.2716610431671143,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.10.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9121135473251343,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.6047027111053467,
+          "nonzero_fraction_lora_A": 0.9999860525131226,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.330880165100098,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.0102763175964355,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.933310329914093,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.0301403999328613,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.268836259841919,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.11.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8792436122894287,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.6839747428894043,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.240686893463135,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.90798807144165,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8780182003974915,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.0174198150634766,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.2153451442718506,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.12.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.846443235874176,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.04982328414917,
+          "nonzero_fraction_lora_A": 0.9999860525131226,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.3720550537109375,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.9187445640563965,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9205889105796814,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.0123462677001953,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.408923864364624,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.13.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8192405700683594,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.076369285583496,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.337177276611328,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999651312828064
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.89446496963501,
+          "nonzero_fraction_lora_A": 0.9999186396598816,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.838120698928833,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.9952856302261353,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.3327748775482178,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.14.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8073622584342957,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.5538406372070312,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.913242816925049,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.68915319442749,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8756667971611023,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.999755859375
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.905146598815918,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.435840606689453,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.15.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8921253681182861,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.624742269515991,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.800586223602295,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.354572772979736,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9956873059272766,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.7993253469467163,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.282093048095703,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.16.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7889354228973389,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.2085869312286377,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.637973785400391,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.071608066558838,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8602328300476074,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.862256646156311,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.255237102508545,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.17.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7777605652809143,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.5506880283355713,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.317233085632324,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.929797649383545,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999721050262451
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8791256546974182,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.6315265893936157,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.640079975128174,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.18.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7555488348007202,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.6966931819915771,
+          "nonzero_fraction_lora_A": 0.9999790787696838,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.482540130615234,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.8510029315948486,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8333348631858826,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.2092162370681763,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.530778646469116,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.19.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7339291572570801,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.731253623962402,
+          "nonzero_fraction_lora_A": 0.9999790787696838,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.908693790435791,
+          "nonzero_fraction_lora_A": 0.9999186396598816,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.763584613800049,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9179676175117493,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.3580503463745117,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.4632201194763184,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.2.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8944204449653625,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.538216471672058,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.8776559829711914,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.502692699432373,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.888908863067627,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.0130274295806885,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.8626259565353394,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.20.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.5872222781181335,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.3306891918182373,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.9732506275177,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.08514666557312,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8109488487243652,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9202125072479248,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.7631930112838745,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.21.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.4119549095630646,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.075384497642517,
+          "nonzero_fraction_lora_A": 0.9999790787696838,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.8421363830566406,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.9511308670043945,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7690897583961487,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8354408740997314,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.2115259170532227,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.22.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.43485528230667114,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9701548218727112,
+          "nonzero_fraction_lora_A": 0.9999651312828064,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.574453353881836,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.5993452072143555,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8200209140777588,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.999755859375
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8418471217155457,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.9565339088439941,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999186396598816
+        },
+        {
+          "module_name": "base_model.model.model.layers.23.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.42264801263809204,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8628209233283997,
+          "nonzero_fraction_lora_A": 0.9999790787696838,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.4702694416046143,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.6210083961486816,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.6120997667312622,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8299729228019714,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.396148681640625,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.24.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.34709155559539795,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7434909343719482,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.0497829914093018,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.696709394454956,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7104582190513611,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.7429624199867249,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.7603979110717773,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.25.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.3767493963241577,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8151440024375916,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 3.7159104347229004,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.964512825012207,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8305895924568176,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.6847047805786133,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.865831732749939,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.26.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.3284350037574768,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.31562286615371704,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.323278903961182,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 5.638489723205566,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8558076024055481,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.6124794483184814,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 1.9720768928527832,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.27.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.628329873085022,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.8975324630737305,
+          "nonzero_fraction_lora_A": 0.9999860525131226,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.507051467895508,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.778419017791748,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999860525131226
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8588129878044128,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.386439323425293,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.3977527618408203,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.3.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9354520440101624,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.86053466796875,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.70246696472168,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999790787696838
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.815168380737305,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9520120620727539,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.4060990810394287,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.5069525241851807,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.4.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9382055997848511,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.619830131530762,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 7.123839855194092,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.564399242401123,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8770775198936462,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.2597970962524414,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.210632085800171,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.5.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9433030486106873,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.523754596710205,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.820570945739746,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.424135684967041,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9026018381118774,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.18990421295166,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.292426347732544,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.6.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9496659636497498,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.26754093170166,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.666263580322266,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.406219482421875,
+          "nonzero_fraction_lora_A": 0.9999186396598816,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.8873029947280884,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.1808035373687744,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.3173394203186035,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.7.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9210342764854431,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.444858074188232,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.880670547485352,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.352663516998291,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9052342176437378,
+          "nonzero_fraction_lora_A": 0.9999592900276184,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.212263584136963,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.238448143005371,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.8.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.906554102897644,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.mlp.down_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 4.3132100105285645,
+          "nonzero_fraction_lora_A": 0.9999930262565613,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.mlp.gate_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.674142360687256,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.mlp.up_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 6.333878040313721,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999930262565613
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.self_attn.k_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9126530289649963,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 1.0
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.self_attn.o_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.128894567489624,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.self_attn.q_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 2.325599193572998,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.9999592900276184
+        },
+        {
+          "module_name": "base_model.model.model.layers.9.self_attn.v_proj",
+          "factor_weights": [
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951,
+            1.4142135623730951
+          ],
+          "merged_delta_frobenius_norm": 0.9128178954124451,
+          "nonzero_fraction_lora_A": 1.0,
+          "nonzero_fraction_lora_B": 0.999755859375
+        }
+      ],
+      "evaluation": {
+        "sst2": {
+          "eval_loss": 0.44134247303009033,
+          "eval_model_preparation_time": 0.0024,
+          "eval_accuracy": 0.7557339449541285,
+          "eval_runtime": 1.7472,
+          "eval_samples_per_second": 499.083,
+          "eval_steps_per_second": 16.026,
+          "eval_samples": 872,
+          "task": "sst2",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+          "model_name": "Qwen/Qwen2.5-1.5B",
+          "classifier_head_init_seed": 0,
+          "classifier_head_restoration": {
+            "restored": true,
+            "path": "classifier_heads/sst2.safetensors",
+            "shape": [
+              2,
+              1536
+            ],
+            "saved_dtype": "torch.float32",
+            "runtime_dtype": "torch.float16",
+            "replaced_quantized_score": false
+          }
+        },
+        "mnli": {
+          "eval_loss": 1.0137505531311035,
+          "eval_model_preparation_time": 0.0031,
+          "eval_accuracy": 0.49403973509933774,
+          "eval_runtime": 37.7288,
+          "eval_samples_per_second": 260.146,
+          "eval_steps_per_second": 8.137,
+          "eval_samples": 9815,
+          "task": "mnli",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+          "model_name": "Qwen/Qwen2.5-1.5B",
+          "classifier_head_init_seed": 0,
+          "classifier_head_restoration": {
+            "restored": true,
+            "path": "classifier_heads/mnli.safetensors",
+            "shape": [
+              3,
+              1536
+            ],
+            "saved_dtype": "torch.float32",
+            "runtime_dtype": "torch.float16",
+            "replaced_quantized_score": false
+          }
+        },
+        "qnli": {
+          "eval_loss": 0.4302854537963867,
+          "eval_model_preparation_time": 0.0031,
+          "eval_accuracy": 0.8522789676002197,
+          "eval_runtime": 25.6682,
+          "eval_samples_per_second": 212.831,
+          "eval_steps_per_second": 6.662,
+          "eval_samples": 5463,
+          "task": "qnli",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+          "model_name": "Qwen/Qwen2.5-1.5B",
+          "classifier_head_init_seed": 0,
+          "classifier_head_restoration": {
+            "restored": true,
+            "path": "classifier_heads/qnli.safetensors",
+            "shape": [
+              2,
+              1536
+            ],
+            "saved_dtype": "torch.float32",
+            "runtime_dtype": "torch.float16",
+            "replaced_quantized_score": false
+          }
+        },
+        "cola": {
+          "eval_loss": 0.7411917448043823,
+          "eval_model_preparation_time": 0.0025,
+          "eval_matthews_correlation": 0.06759258309499201,
+          "eval_runtime": 1.1349,
+          "eval_samples_per_second": 919.005,
+          "eval_steps_per_second": 29.077,
+          "prediction_distribution": {
+            "class_counts": [
+              729,
+              314
+            ],
+            "total_predictions": 1043,
+            "dominant_class": 0,
+            "dominant_fraction": 0.6989453499520614,
+            "degenerate_prediction": false
+          },
+          "eval_samples": 1043,
+          "task": "cola",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+          "model_name": "Qwen/Qwen2.5-1.5B",
+          "classifier_head_init_seed": 0,
+          "classifier_head_restoration": {
+            "restored": true,
+            "path": "classifier_heads/cola.safetensors",
+            "shape": [
+              2,
+              1536
+            ],
+            "saved_dtype": "torch.float32",
+            "runtime_dtype": "torch.float16",
+            "replaced_quantized_score": false
+          }
+        },
+        "rte": {
+          "eval_loss": 0.7744594812393188,
+          "eval_model_preparation_time": 0.003,
+          "eval_accuracy": 0.5451263537906137,
+          "eval_runtime": 2.1914,
+          "eval_samples_per_second": 126.406,
+          "eval_steps_per_second": 4.107,
+          "eval_samples": 277,
+          "task": "rte",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/hp_sweep_restored_heads_tmp/dare/ties/drop_0p1/trim_10/lambda_0p8",
+          "model_name": "Qwen/Qwen2.5-1.5B",
+          "classifier_head_init_seed": 0,
+          "classifier_head_restoration": {
+            "restored": true,
+            "path": "classifier_heads/rte.safetensors",
+            "shape": [
+              2,
+              1536
+            ],
+            "saved_dtype": "torch.float32",
+            "runtime_dtype": "torch.float16",
+            "replaced_quantized_score": false
+          }
+        }
+      }
+    }
+  ]
+}

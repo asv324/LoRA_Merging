@@ -1,0 +1,132 @@
+{
+  "status": "completed",
+  "initial_sweep_source_root": "C:\\Projects\\LoRA_Merging\\results\\hp_sweep_low_storage",
+  "rerun_source_root": "C:\\Projects\\LoRA_Merging\\results\\hp_sweep_gpa_rerun",
+  "hypothesis_tested": "Increasing GPA max_iter from 100 to 300 is sufficient to rescue GPA-family performance and CoLA collapse.",
+  "initial_decision_basis": {
+    "gpa_record_count": 150,
+    "gpa_module_count": 29400,
+    "gpa_modules_hitting_max_iter": 27180,
+    "gpa_max_iter_saturation_fraction": 0.9244897959183673,
+    "best_gpa_family_cola_metric": 0.0,
+    "best_enhanced_minus_baseline_avg_primary": 0.00766548112559412,
+    "candidate_scope": [
+      "gpa_baseline_best_trim_region",
+      "gpa_dgpa_saties_wb_0p5",
+      "gpa_dgpa_saties_wb_1p0"
+    ]
+  },
+  "rerun_configuration": {
+    "tasks": [
+      "sst2",
+      "mnli",
+      "qnli",
+      "cola",
+      "rte"
+    ],
+    "max_iter": 300,
+    "trim_percentage": 20,
+    "configs": [
+      {
+        "method_key": "gpa_baseline",
+        "display_name": "GPA + TIES",
+        "lambda": 0.2,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false,
+        "b_weight_alpha": 0.0,
+        "source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json"
+      },
+      {
+        "method_key": "gpa_dgpa_saties_wb_0p5",
+        "display_name": "dGPA + saTIES + wB(0.5)",
+        "lambda": 0.25,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true,
+        "b_weight_alpha": 0.5,
+        "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json"
+      },
+      {
+        "method_key": "gpa_dgpa_saties_wb_1p0",
+        "display_name": "dGPA + saTIES + wB(1.0)",
+        "lambda": 0.2,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true,
+        "b_weight_alpha": 1.0,
+        "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p2.json"
+      }
+    ]
+  },
+  "rerun_results": {
+    "gpa_baseline": {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json",
+      "average_primary_score_before": 0.3921236450322554,
+      "average_primary_score_after": 0.3644324823763318,
+      "average_primary_score_delta": -0.027691162655923585,
+      "gpa_modules_hitting_max_iter_before": 178,
+      "gpa_modules_hitting_max_iter_after": 9,
+      "gpa_max_iter_fraction_before": 0.9081632653061225,
+      "gpa_max_iter_fraction_after": 0.04591836734693878,
+      "cola_metric_after": 0.0,
+      "cola_prediction_distribution": {
+        "class_counts": [
+          1043,
+          0
+        ],
+        "dominant_class": 0,
+        "dominant_fraction": 1.0,
+        "degenerate_prediction": true
+      }
+    },
+    "gpa_dgpa_saties_wb_0p5": {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json",
+      "average_primary_score_before": 0.3997891261578495,
+      "average_primary_score_after": 0.36987072752628486,
+      "average_primary_score_delta": -0.029918398631564647,
+      "gpa_modules_hitting_max_iter_before": 182,
+      "gpa_modules_hitting_max_iter_after": 13,
+      "gpa_max_iter_fraction_before": 0.9285714285714286,
+      "gpa_max_iter_fraction_after": 0.0663265306122449,
+      "cola_metric_after": 0.0,
+      "cola_prediction_distribution": {
+        "class_counts": [
+          1043,
+          0
+        ],
+        "dominant_class": 0,
+        "dominant_fraction": 1.0,
+        "degenerate_prediction": true
+      }
+    },
+    "gpa_dgpa_saties_wb_1p0": {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p2.json",
+      "average_primary_score_before": 0.3856055525928997,
+      "average_primary_score_after": 0.36588078195069784,
+      "average_primary_score_delta": -0.01972477064220185,
+      "gpa_modules_hitting_max_iter_before": 182,
+      "gpa_modules_hitting_max_iter_after": 13,
+      "gpa_max_iter_fraction_before": 0.9285714285714286,
+      "gpa_max_iter_fraction_after": 0.0663265306122449,
+      "cola_metric_after": 0.0,
+      "cola_prediction_distribution": {
+        "class_counts": [
+          1043,
+          0
+        ],
+        "dominant_class": 0,
+        "dominant_fraction": 1.0,
+        "degenerate_prediction": true
+      }
+    }
+  },
+  "best_rerun_average_primary_score": 0.36987072752628486,
+  "best_rerun_method_key": "gpa_dgpa_saties_wb_0p5",
+  "best_rerun_cola_metric": 0.0,
+  "further_gpa_iteration_rerun_recommended": false,
+  "conclusion": "The targeted rerun falsifies the insufficient-iterations hypothesis for the selected GPA configurations. Raising max_iter to 300 sharply reduced GPA saturation but did not recover CoLA and reduced average performance for all three rerun configs.",
+  "rationale": [
+    "All three rerun configurations still produced fully degenerate CoLA predictions with class counts [1043, 0].",
+    "Best rerun CoLA Matthews remained 0.0.",
+    "Best rerun average-primary-score was 0.3699, which is below both the original GPA baseline (0.3921) and the best enhanced GPA result from the initial sweep (0.3998).",
+    "The rerun improved convergence saturation substantially, so the remaining failure mode is unlikely to be explained by max_iter alone."
+  ]
+}

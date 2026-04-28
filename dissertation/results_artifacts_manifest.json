@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-04-25T19:07:55.903550+00:00",
+  "script": "scripts/generate_dissertation_results_artifacts.py",
+  "style_source": "Documentation/dissertation_figure_style_guide.md",
+  "scope_source": "Documentation/revised_implementation_plan_v2 (1).md",
+  "figure_count": 16,
+  "table_count": 7,
+  "figures": [
+    {
+      "stem": "fig_04_01_synthetic_rotation_recovery",
+      "description": "Synthetic Experiment 1 rotation recovery heatmap.",
+      "outputs": [
+        "dissertation/figures/results/synthetic/fig_04_01_synthetic_rotation_recovery.pdf",
+        "dissertation/figures/results/synthetic/fig_04_01_synthetic_rotation_recovery.png"
+      ],
+      "sources": [
+        "results/synthetic_exp1.json"
+      ]
+    },
+    {
+      "stem": "fig_04_02_synthetic_convergence",
+      "description": "Synthetic Experiment 2 convergence curves and iteration summary.",
+      "outputs": [
+        "dissertation/figures/results/synthetic/fig_04_02_synthetic_convergence.pdf",
+        "dissertation/figures/results/synthetic/fig_04_02_synthetic_convergence.png"
+      ],
+      "sources": [
+        "results/synthetic_exp2_convergence.json"
+      ]
+    },
+    {
+      "stem": "fig_04_03_synthetic_nonorthogonal_robustness",
+      "description": "Synthetic Experiment 3 robustness to non-orthogonal perturbations.",
+      "outputs": [
+        "dissertation/figures/results/synthetic/fig_04_03_synthetic_nonorthogonal_robustness.pdf",
+        "dissertation/figures/results/synthetic/fig_04_03_synthetic_nonorthogonal_robustness.png"
+      ],
+      "sources": [
+        "results/synthetic_exp3_nonorthogonal.json"
+      ]
+    },
+    {
+      "stem": "fig_04_04_synthetic_structured_overlap",
+      "description": "Synthetic Experiment 4 structured LoRA-like subspace recovery.",
+      "outputs": [
+        "dissertation/figures/results/synthetic/fig_04_04_synthetic_structured_overlap.pdf",
+        "dissertation/figures/results/synthetic/fig_04_04_synthetic_structured_overlap.png"
+      ],
+      "sources": [
+        "results/synthetic_exp4_structured.json"
+      ]
+    },
+    {
+      "stem": "fig_04_05_adapter_norm_structure",
+      "description": "Experiment 5 adapter norm ranking and layer-local B-factor structure.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/fig_04_05_adapter_norm_structure.pdf",
+        "dissertation/figures/results/adapter_analysis/fig_04_05_adapter_norm_structure.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json"
+      ]
+    },
+    {
+      "stem": "adapter_norm_ranking",
+      "description": "Experiment 5 adapter analysis: grouped LoRA A and B norm ranking by task.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/adapter_norm_ranking.pdf",
+        "dissertation/figures/results/adapter_analysis/adapter_norm_ranking.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json",
+        "configs/lora_param_mapping.json"
+      ]
+    },
+    {
+      "stem": "adapter_norm_attention_vs_mlp",
+      "description": "Experiment 5 adapter analysis: module-family split of LoRA A and B norms.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/adapter_norm_attention_vs_mlp.pdf",
+        "dissertation/figures/results/adapter_analysis/adapter_norm_attention_vs_mlp.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json",
+        "configs/lora_param_mapping.json"
+      ]
+    },
+    {
+      "stem": "adapter_layer_heatmap_A",
+      "description": "Experiment 5 adapter analysis: two-panel per-layer LoRA A norm heatmap.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/adapter_layer_heatmap_A.pdf",
+        "dissertation/figures/results/adapter_analysis/adapter_layer_heatmap_A.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json",
+        "configs/lora_param_mapping.json"
+      ]
+    },
+    {
+      "stem": "adapter_depth_trends",
+      "description": "Experiment 5 adapter analysis: depth profiles of mean LoRA A norms by task and module family.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/adapter_depth_trends.pdf",
+        "dissertation/figures/results/adapter_analysis/adapter_depth_trends.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json",
+        "configs/lora_param_mapping.json"
+      ]
+    },
+    {
+      "stem": "adapter_perf_vs_norm",
+      "description": "Experiment 5 adapter analysis: scatter of combined adapter norm against standalone performance.",
+      "outputs": [
+        "dissertation/figures/results/adapter_analysis/adapter_perf_vs_norm.pdf",
+        "dissertation/figures/results/adapter_analysis/adapter_perf_vs_norm.png"
+      ],
+      "sources": [
+        "results/adapter_norm_analysis.json",
+        "configs/lora_param_mapping.json"
+      ]
+    },
+    {
+      "stem": "fig_04_06_main_method_comparison",
+      "description": "Experiment 6 main method comparison using restored-head best hyperparameters.",
+      "outputs": [
+        "dissertation/figures/results/main_results/fig_04_06_main_method_comparison.pdf",
+        "dissertation/figures/results/main_results/fig_04_06_main_method_comparison.png"
+      ],
+      "sources": [
+        "results/main_results_restored_heads.json"
+      ]
+    },
+    {
+      "stem": "fig_04_07_enhancement_ablation",
+      "description": "Experiment 9 enhancement ablation and contribution decomposition.",
+      "outputs": [
+        "dissertation/figures/results/ablations/fig_04_07_enhancement_ablation.pdf",
+        "dissertation/figures/results/ablations/fig_04_07_enhancement_ablation.png"
+      ],
+      "sources": [
+        "results/ablation_enhancement/summary.json"
+      ]
+    },
+    {
+      "stem": "fig_04_08_n_ablation",
+      "description": "Experiment 11 N-ablation line plot with subset dispersion.",
+      "outputs": [
+        "dissertation/figures/results/ablations/fig_04_08_n_ablation.pdf",
+        "dissertation/figures/results/ablations/fig_04_08_n_ablation.png"
+      ],
+      "sources": [
+        "results/ablation_N/summary.json"
+      ]
+    },
+    {
+      "stem": "fig_04_09_cka_before_after",
+      "description": "Experiment 10 pairwise CKA before and after GPA alignment.",
+      "outputs": [
+        "dissertation/figures/results/alignment_analysis/fig_04_09_cka_before_after.pdf",
+        "dissertation/figures/results/alignment_analysis/fig_04_09_cka_before_after.png"
+      ],
+      "sources": [
+        "results/cka/summary.json"
+      ]
+    },
+    {
+      "stem": "fig_04_10_layer_residual_heatmap",
+      "description": "Experiment 13 per-layer alignment residual heatmap and norm-spread correlations.",
+      "outputs": [
+        "dissertation/figures/results/alignment_analysis/fig_04_10_layer_residual_heatmap.pdf",
+        "dissertation/figures/results/alignment_analysis/fig_04_10_layer_residual_heatmap.png"
+      ],
+      "sources": [
+        "results/layer_analysis/summary.json"
+      ]
+    },
+    {
+      "stem": "fig_04_11_cola_prediction_distribution",
+      "description": "Experiment 8 CoLA score and prediction distribution across lambda.",
+      "outputs": [
+        "dissertation/figures/results/main_results/fig_04_11_cola_prediction_distribution.pdf",
+        "dissertation/figures/results/main_results/fig_04_11_cola_prediction_distribution.png"
+      ],
+      "sources": [
+        "results/hp_sweep_restored_heads/cola_prediction_distributions.json"
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "stem": "table_04_01_main_results",
+      "description": "Main restored-head results by method and task.",
+      "outputs": [
+        "dissertation/tables/results/table_04_01_main_results.csv",
+        "dissertation/tables/results/table_04_01_main_results.tex"
+      ],
+      "sources": [
+        "results/main_results_restored_heads.json"
+      ]
+    },
+    {
+      "stem": "table_04_02_seed_variance",
+      "description": "Three-seed variance summary for primary comparisons.",
+      "outputs": [
+        "dissertation/tables/results/table_04_02_seed_variance.csv",
+        "dissertation/tables/results/table_04_02_seed_variance.tex"
+      ],
+      "sources": [
+        "results/seed_variance.json",
+        "results/seed_variance_restored_heads.json"
+      ]
+    },
+    {
+      "stem": "table_04_03_enhancement_ablation",
+      "description": "GPA enhancement ablation by task.",
+      "outputs": [
+        "dissertation/tables/results/table_04_03_enhancement_ablation.csv",
+        "dissertation/tables/results/table_04_03_enhancement_ablation.tex"
+      ],
+      "sources": [
+        "results/ablation_enhancement/summary.json"
+      ]
+    },
+    {
+      "stem": "table_04_04_enhancement_contributions",
+      "description": "Pairwise contribution decomposition for GPA enhancements.",
+      "outputs": [
+        "dissertation/tables/results/table_04_04_enhancement_contributions.csv",
+        "dissertation/tables/results/table_04_04_enhancement_contributions.tex"
+      ],
+      "sources": [
+        "results/ablation_enhancement/summary.json"
+      ]
+    },
+    {
+      "stem": "table_04_05_n_ablation",
+      "description": "N-ablation mean average score with subset standard deviation.",
+      "outputs": [
+        "dissertation/tables/results/table_04_05_n_ablation.csv",
+        "dissertation/tables/results/table_04_05_n_ablation.tex"
+      ],
+      "sources": [
+        "results/ablation_N/summary.json"
+      ]
+    },
+    {
+      "stem": "table_04_06_ta_aligned",
+      "description": "Task Arithmetic in aligned factor space.",
+      "outputs": [
+        "dissertation/tables/results/table_04_06_ta_aligned.csv",
+        "dissertation/tables/results/table_04_06_ta_aligned.tex"
+      ],
+      "sources": [
+        "results/ablation_ta_aligned/summary.json",
+        "results/ablation_ta_aligned/gpa_aligned_ta.json",
+        "results/ablation_ta_aligned/enhanced_gpa_aligned_ta.json"
+      ]
+    },
+    {
+      "stem": "table_04_07_alignment_summary",
+      "description": "CKA and layer residual summary statistics.",
+      "outputs": [
+        "dissertation/tables/results/table_04_07_alignment_summary.csv",
+        "dissertation/tables/results/table_04_07_alignment_summary.tex"
+      ],
+      "sources": [
+        "results/cka/summary.json",
+        "results/layer_analysis/summary.json"
+      ]
+    }
+  ]
+}

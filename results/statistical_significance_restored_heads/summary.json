@@ -1,0 +1,188 @@
+{
+  "step": "week3_step3_3_statistical_significance",
+  "best_hparams_path": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+  "tasks": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "method_aliases": [
+    "gpa_dgpa_saties_wb_0p5"
+  ],
+  "adapters_seed_template": "/home/md2503/av735/LoRA_Merging/adapters/seed_{seed}",
+  "runtime": {
+    "train_missing_adapters": false,
+    "majority_sign_method": "total",
+    "eval_batch_size": 32,
+    "max_eval_samples": null,
+    "lambda_overrides": {}
+  },
+  "methods": {
+    "gpa_dgpa_saties_wb_0p5": {
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "selected_method_key": "gpa_dgpa_saties_wb_0p5",
+      "selected_source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_1.json",
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "drop_probability": null,
+        "density": 0.7,
+        "b_weight_alpha": 0.5,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true
+      },
+      "per_seed": [
+        {
+          "seed": 42,
+          "result_path": "/home/md2503/av735/LoRA_Merging/results/statistical_significance_restored_heads/seed_42/gpa_dgpa_saties_wb_0p5.json",
+          "average_primary_score": 0.41556159914632157,
+          "primary_metrics": {
+            "sst2": {
+              "metric": "accuracy",
+              "value": 0.6158256880733946
+            },
+            "mnli": {
+              "metric": "accuracy",
+              "value": 0.40254712175241975
+            },
+            "qnli": {
+              "metric": "accuracy",
+              "value": 0.5528098114589054
+            },
+            "cola": {
+              "metric": "matthews_correlation",
+              "value": 0.04453151163100391
+            },
+            "rte": {
+              "metric": "accuracy",
+              "value": 0.4620938628158845
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "result_path": "/home/md2503/av735/LoRA_Merging/results/statistical_significance_restored_heads/seed_43/gpa_dgpa_saties_wb_0p5.json",
+          "average_primary_score": 0.4075117537282538,
+          "primary_metrics": {
+            "sst2": {
+              "metric": "accuracy",
+              "value": 0.5424311926605505
+            },
+            "mnli": {
+              "metric": "accuracy",
+              "value": 0.3228731533367295
+            },
+            "qnli": {
+              "metric": "accuracy",
+              "value": 0.5052169137836353
+            },
+            "cola": {
+              "metric": "matthews_correlation",
+              "value": 0.07858985543075096
+            },
+            "rte": {
+              "metric": "accuracy",
+              "value": 0.5884476534296029
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "result_path": "/home/md2503/av735/LoRA_Merging/results/statistical_significance_restored_heads/seed_44/gpa_dgpa_saties_wb_0p5.json",
+          "average_primary_score": 0.5136444428261551,
+          "primary_metrics": {
+            "sst2": {
+              "metric": "accuracy",
+              "value": 0.8715596330275229
+            },
+            "mnli": {
+              "metric": "accuracy",
+              "value": 0.3445746306673459
+            },
+            "qnli": {
+              "metric": "accuracy",
+              "value": 0.5639758374519495
+            },
+            "cola": {
+              "metric": "matthews_correlation",
+              "value": 0.2646464090128378
+            },
+            "rte": {
+              "metric": "accuracy",
+              "value": 0.5234657039711191
+            }
+          }
+        }
+      ],
+      "average_primary_score": {
+        "values": [
+          0.41556159914632157,
+          0.4075117537282538,
+          0.5136444428261551
+        ],
+        "mean": 0.4455725985669101,
+        "std": 0.0590891867303559
+      },
+      "tasks": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            0.6158256880733946,
+            0.5424311926605505,
+            0.8715596330275229
+          ],
+          "mean": 0.676605504587156,
+          "std": 0.1727773773854199
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            0.40254712175241975,
+            0.3228731533367295,
+            0.3445746306673459
+          ],
+          "mean": 0.35666496858549834,
+          "std": 0.041190017164447
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            0.5528098114589054,
+            0.5052169137836353,
+            0.5639758374519495
+          ],
+          "mean": 0.5406675208981634,
+          "std": 0.031204634154413755
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.04453151163100391,
+            0.07858985543075096,
+            0.2646464090128378
+          ],
+          "mean": 0.12925592535819755,
+          "std": 0.11848177072348935
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.4620938628158845,
+            0.5884476534296029,
+            0.5234657039711191
+          ],
+          "mean": 0.5246690734055356,
+          "std": 0.06318549021817126
+        }
+      }
+    }
+  },
+  "comparisons": {}
+}

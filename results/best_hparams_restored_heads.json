@@ -1,0 +1,501 @@
+{
+  "source_root": "results/hp_sweep_restored_heads",
+  "task_order": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "selection_metric": "average_primary_score",
+  "methods": {
+    "task_arithmetic": {
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "source_path": "task_arithmetic/lambda_0p5.json",
+      "average_primary_score": 0.7677052682494991,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.9403669724770642
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.8850738665308202
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.9132344865458539
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.34172827201144684
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.7581227436823105
+        }
+      },
+      "hyperparameters": {
+        "lambda": 0.5,
+        "trim_percentage": null,
+        "drop_probability": null,
+        "density": null,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    "ties": {
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "source_path": "ties/trim_30/lambda_1.json",
+      "average_primary_score": 0.5909428760356737,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.7454128440366973
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.7278655119714722
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.8855939959729087
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0687662159229228
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "drop_probability": null,
+        "density": 0.7,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    "dare_ties": {
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_1.json",
+      "average_primary_score": 0.6186627602484369,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.8291284403669725
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.7979623025980642
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.876258466044298
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.07371910486822869
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.516245487364621
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 10,
+        "drop_probability": 0.5,
+        "density": 0.9,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    "lr_knots": {
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "source_path": "lr_knots/trim_30/lambda_1.json",
+      "average_primary_score": 0.5026576386930066,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.6731651376146789
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.37911360163015795
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.742449203734212
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.14816313857262692
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5703971119133574
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "drop_probability": null,
+        "density": 0.7,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    "gpa_baseline": {
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "source_path": "gpa_ties/baseline/trim_30/lambda_1.json",
+      "average_primary_score": 0.5330770004571226,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.7454128440366973
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.35354049923586345
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.7759472817133443
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.17676596574736192
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.6137184115523465
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "drop_probability": null,
+        "density": 0.7,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      },
+      "variant_label": "GPA+TIES",
+      "gpa_convergence": {
+        "module_count": 196,
+        "modules_hitting_max_iter": 178,
+        "max_iter_fraction": 0.9081632653061225
+      }
+    },
+    "gpa_variants": {
+      "gpa_baseline": {
+        "method_key": "gpa_baseline",
+        "display_name": "GPA + TIES",
+        "source_path": "gpa_ties/baseline/trim_30/lambda_1.json",
+        "average_primary_score": 0.5330770004571226,
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.7454128440366973
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.35354049923586345
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.7759472817133443
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.17676596574736192
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.6137184115523465
+          }
+        },
+        "hyperparameters": {
+          "lambda": 1.0,
+          "trim_percentage": 30,
+          "drop_probability": null,
+          "density": 0.7,
+          "b_weight_alpha": 0.0,
+          "normalise_a_factors": false,
+          "scale_aware_ties": false
+        },
+        "variant_label": "GPA+TIES",
+        "gpa_convergence": {
+          "module_count": 196,
+          "modules_hitting_max_iter": 178,
+          "max_iter_fraction": 0.9081632653061225
+        }
+      },
+      "gpa_dgpa_ties": {
+        "method_key": "gpa_dgpa_ties",
+        "display_name": "dGPA + TIES",
+        "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_1.json",
+        "average_primary_score": 0.5310664775140894,
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.7408256880733946
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.35241976566479877
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.7684422478491671
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.16909594952099252
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.6245487364620939
+          }
+        },
+        "hyperparameters": {
+          "lambda": 1.0,
+          "trim_percentage": 20,
+          "drop_probability": null,
+          "density": 0.8,
+          "b_weight_alpha": 0.0,
+          "normalise_a_factors": true,
+          "scale_aware_ties": false
+        },
+        "variant_label": "dGPA+TIES",
+        "gpa_convergence": {
+          "module_count": 196,
+          "modules_hitting_max_iter": 182,
+          "max_iter_fraction": 0.9285714285714286
+        }
+      },
+      "gpa_dgpa_saties": {
+        "method_key": "gpa_dgpa_saties",
+        "display_name": "dGPA + saTIES",
+        "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_1.json",
+        "average_primary_score": 0.5369578811190293,
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.7706422018348624
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.3491594498217015
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.7655134541460736
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.17131545502716589
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.628158844765343
+          }
+        },
+        "hyperparameters": {
+          "lambda": 1.0,
+          "trim_percentage": 30,
+          "drop_probability": null,
+          "density": 0.7,
+          "b_weight_alpha": 0.0,
+          "normalise_a_factors": true,
+          "scale_aware_ties": true
+        },
+        "variant_label": "dGPA+saTIES",
+        "gpa_convergence": {
+          "module_count": 196,
+          "modules_hitting_max_iter": 182,
+          "max_iter_fraction": 0.9285714285714286
+        }
+      },
+      "gpa_dgpa_saties_wb_0p5": {
+        "method_key": "gpa_dgpa_saties_wb_0p5",
+        "display_name": "dGPA + saTIES + wB(0.5)",
+        "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_1.json",
+        "average_primary_score": 0.5433182025515573,
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.7362385321100917
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.3525216505348956
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.7261577887607542
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.23019289694771214
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.6714801444043321
+          }
+        },
+        "hyperparameters": {
+          "lambda": 1.0,
+          "trim_percentage": 30,
+          "drop_probability": null,
+          "density": 0.7,
+          "b_weight_alpha": 0.5,
+          "normalise_a_factors": true,
+          "scale_aware_ties": true
+        },
+        "variant_label": "dGPA+saTIES+wB(0.5)",
+        "gpa_convergence": {
+          "module_count": 196,
+          "modules_hitting_max_iter": 182,
+          "max_iter_fraction": 0.9285714285714286
+        }
+      },
+      "gpa_dgpa_saties_wb_1p0": {
+        "method_key": "gpa_dgpa_saties_wb_1p0",
+        "display_name": "dGPA + saTIES + wB(1.0)",
+        "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_1.json",
+        "average_primary_score": 0.5383523248842556,
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.6857798165137615
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.3626082526744778
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.691195313930075
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.2770879885953823
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.6750902527075813
+          }
+        },
+        "hyperparameters": {
+          "lambda": 1.0,
+          "trim_percentage": 30,
+          "drop_probability": null,
+          "density": 0.7,
+          "b_weight_alpha": 1.0,
+          "normalise_a_factors": true,
+          "scale_aware_ties": true
+        },
+        "variant_label": "dGPA+saTIES+wB(1)",
+        "gpa_convergence": {
+          "module_count": 196,
+          "modules_hitting_max_iter": 182,
+          "max_iter_fraction": 0.9285714285714286
+        }
+      }
+    },
+    "gpa_best_enhanced": {
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_1.json",
+      "average_primary_score": 0.5433182025515573,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.7362385321100917
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.3525216505348956
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.7261577887607542
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.23019289694771214
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.6714801444043321
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "drop_probability": null,
+        "density": 0.7,
+        "b_weight_alpha": 0.5,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true
+      },
+      "variant_label": "dGPA+saTIES+wB(0.5)",
+      "gpa_convergence": {
+        "module_count": 196,
+        "modules_hitting_max_iter": 182,
+        "max_iter_fraction": 0.9285714285714286
+      }
+    },
+    "oracle": {
+      "method_key": "oracle",
+      "display_name": "Individual (oracle)",
+      "source_path": "adapters/*/eval_metrics.json",
+      "average_primary_score": 0.8646391315917935,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.963302752293578
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.8954661232806929
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.9458173164927696
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.6521834731121433
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.8664259927797834
+        }
+      },
+      "hyperparameters": {
+        "lambda": null,
+        "trim_percentage": null,
+        "drop_probability": null,
+        "density": null,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    }
+  }
+}

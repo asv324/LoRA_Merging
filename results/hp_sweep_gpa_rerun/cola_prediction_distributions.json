@@ -1,0 +1,97 @@
+{
+  "source_root": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_gpa_rerun",
+  "record_count": 3,
+  "prediction_distribution_available": true,
+  "summary_by_method": {
+    "gpa_baseline": {
+      "prediction_distribution_available": true,
+      "record_count": 1,
+      "available_record_count": 1,
+      "non_degenerate_lambda_threshold": null,
+      "non_degenerate_source_path": null,
+      "best_cola_metric": 0.0,
+      "best_cola_metric_source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json",
+      "rerun_required": true
+    },
+    "gpa_dgpa_saties_wb_0p5": {
+      "prediction_distribution_available": true,
+      "record_count": 1,
+      "available_record_count": 1,
+      "non_degenerate_lambda_threshold": null,
+      "non_degenerate_source_path": null,
+      "best_cola_metric": 0.0,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json",
+      "rerun_required": true
+    },
+    "gpa_dgpa_saties_wb_1p0": {
+      "prediction_distribution_available": true,
+      "record_count": 1,
+      "available_record_count": 1,
+      "non_degenerate_lambda_threshold": null,
+      "non_degenerate_source_path": null,
+      "best_cola_metric": 0.0,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p2.json",
+      "rerun_required": true
+    }
+  },
+  "records": [
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.0,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        1043,
+        0
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 1.0,
+      "degenerate_prediction": true
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.0,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        1043,
+        0
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 1.0,
+      "degenerate_prediction": true
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.0,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        1043,
+        0
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 1.0,
+      "degenerate_prediction": true
+    }
+  ],
+  "notes": [
+    "Runs created before prediction-distribution logging was added will report prediction_distribution_available=false.",
+    "For methods without available class counts, rerun CoLA evaluation is required to compute a true non-degenerate lambda threshold."
+  ]
+}

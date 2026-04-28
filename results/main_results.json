@@ -1,0 +1,285 @@
+{
+  "source_root": "C:\\Projects\\LoRA_Merging\\results\\hp_sweep_low_storage",
+  "row_order": [
+    "oracle",
+    "task_arithmetic",
+    "ties",
+    "dare_ties",
+    "lr_knots",
+    "gpa_baseline",
+    "gpa_best_enhanced"
+  ],
+  "rows": [
+    {
+      "method_key": "oracle",
+      "display_name": "Individual (oracle)",
+      "source_path": "adapters/*/eval_metrics.json",
+      "average_primary_score": 0.8646391315917935,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.963302752293578
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.8954661232806929
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.9458173164927696
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.6521834731121433
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.8664259927797834
+        }
+      },
+      "hyperparameters": {
+        "lambda": null,
+        "trim_percentage": null,
+        "drop_probability": null,
+        "density": null,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    {
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "source_path": "task_arithmetic/lambda_1.json",
+      "average_primary_score": 0.4514705402249376,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.7970183486238532
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.435048395313296
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.4946000366099213
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5306859205776173
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": null,
+        "drop_probability": null,
+        "density": null,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    {
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "source_path": "ties/trim_10/lambda_0p7.json",
+      "average_primary_score": 0.39427411683398184,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.6100917431192661
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.33978604177279675
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.49441698700347797
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 0.7,
+        "trim_percentage": 10,
+        "drop_probability": null,
+        "density": 0.9,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    {
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_1.json",
+      "average_primary_score": 0.40425375535313834,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.6009174311926605
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.39867549668874175
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.4946000366099213
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 1.0,
+        "trim_percentage": 20,
+        "drop_probability": 0.5,
+        "density": 0.8,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    {
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "source_path": "lr_knots/trim_10/lambda_0p5.json",
+      "average_primary_score": 0.3754009027402197,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.5194954128440367
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.33601630157921547
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.49441698700347797
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 0.5,
+        "trim_percentage": 10,
+        "drop_probability": null,
+        "density": 0.9,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      }
+    },
+    {
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json",
+      "average_primary_score": 0.3921236450322554,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.6032110091743119
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.3359144167091187
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.49441698700347797
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 0.2,
+        "trim_percentage": 20,
+        "drop_probability": null,
+        "density": 0.8,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      },
+      "variant_label": "GPA+TIES",
+      "gpa_convergence": {
+        "module_count": 196,
+        "modules_hitting_max_iter": 178,
+        "max_iter_fraction": 0.9081632653061225
+      }
+    },
+    {
+      "method_key": "gpa_best_enhanced",
+      "display_name": "dGPA + saTIES + wB (best enhanced)",
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json",
+      "average_primary_score": 0.3997891261578495,
+      "primary_metrics": {
+        "sst2": {
+          "metric": "accuracy",
+          "value": 0.6399082568807339
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "value": 0.33754457463066734
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "value": 0.49441698700347797
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "value": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "value": 0.5270758122743683
+        }
+      },
+      "hyperparameters": {
+        "lambda": 0.25,
+        "trim_percentage": 20,
+        "drop_probability": null,
+        "density": 0.8,
+        "b_weight_alpha": 0.5,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true
+      },
+      "variant_label": "dGPA+saTIES+wB(0.5)",
+      "gpa_convergence": {
+        "module_count": 196,
+        "modules_hitting_max_iter": 182,
+        "max_iter_fraction": 0.9285714285714286
+      }
+    }
+  ]
+}

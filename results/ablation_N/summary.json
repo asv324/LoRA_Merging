@@ -1,0 +1,3336 @@
+{
+  "step": "step_4_1_experiment_11_vary_N",
+  "results_root": "/home/md2503/av735/LoRA_Merging/results/ablation_N",
+  "best_hparams_path": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+  "methods": [
+    "gpa_baseline",
+    "gpa_dgpa_saties_wb_0p5",
+    "ties",
+    "lr_knots"
+  ],
+  "n_values": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "run_manifest": {
+    "step": "step_4_1_experiment_11_vary_N",
+    "tasks_all": [
+      "sst2",
+      "mnli",
+      "qnli",
+      "cola",
+      "rte"
+    ],
+    "adapters_dir": "/home/md2503/av735/LoRA_Merging/adapters",
+    "results_root": "/home/md2503/av735/LoRA_Merging/results/ablation_N",
+    "majority_sign_method": "total",
+    "eval_batch_size": 32,
+    "max_eval_samples": null,
+    "best_hparams_path": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+    "N_5_source": {
+      "source_root": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+      "rationale": "N=5 is sourced from the restored-head Week 3 argmax rows in results/best_hparams.json so the ablation stays aligned with the authoritative restored-head operating points."
+    },
+    "methods": [
+      {
+        "alias": "gpa_baseline",
+        "display_name": "GPA + TIES",
+        "merge_script": "merge_gpa_ties.py",
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      },
+      {
+        "alias": "gpa_dgpa_saties_wb_0p5",
+        "display_name": "dGPA + saTIES + wB(0.5)",
+        "merge_script": "merge_gpa_ties.py",
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "b_weight_alpha": 0.5,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true
+      },
+      {
+        "alias": "ties",
+        "display_name": "TIES-Merging",
+        "merge_script": "merge_ties.py",
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      },
+      {
+        "alias": "lr_knots",
+        "display_name": "LR-KnOTS + TIES",
+        "merge_script": "merge_lr_knots.py",
+        "lambda": 1.0,
+        "trim_percentage": 30,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      }
+    ],
+    "subsets_by_N": {
+      "2": [
+        [
+          "mnli",
+          "sst2"
+        ],
+        [
+          "qnli",
+          "sst2"
+        ],
+        [
+          "cola",
+          "sst2"
+        ],
+        [
+          "rte",
+          "sst2"
+        ],
+        [
+          "mnli",
+          "qnli"
+        ],
+        [
+          "cola",
+          "mnli"
+        ],
+        [
+          "mnli",
+          "rte"
+        ],
+        [
+          "cola",
+          "qnli"
+        ],
+        [
+          "qnli",
+          "rte"
+        ],
+        [
+          "cola",
+          "rte"
+        ]
+      ],
+      "3": [
+        [
+          "mnli",
+          "rte",
+          "sst2"
+        ],
+        [
+          "mnli",
+          "qnli",
+          "rte"
+        ],
+        [
+          "cola",
+          "mnli",
+          "rte"
+        ],
+        [
+          "cola",
+          "qnli",
+          "sst2"
+        ],
+        [
+          "cola",
+          "mnli",
+          "qnli"
+        ]
+      ],
+      "4": [
+        [
+          "cola",
+          "mnli",
+          "qnli",
+          "sst2"
+        ],
+        [
+          "mnli",
+          "qnli",
+          "rte",
+          "sst2"
+        ],
+        [
+          "cola",
+          "mnli",
+          "rte",
+          "sst2"
+        ],
+        [
+          "cola",
+          "qnli",
+          "rte",
+          "sst2"
+        ],
+        [
+          "cola",
+          "mnli",
+          "qnli",
+          "rte"
+        ]
+      ]
+    }
+  },
+  "cells": {
+    "gpa_baseline": {
+      "2": {
+        "subset_count": 10,
+        "average_primary_score": {
+          "values": [
+            0.48565877169563026,
+            0.6326160909905968,
+            0.5574879685218048,
+            0.6251022944905137,
+            0.7829527011193441,
+            0.6930078289511192,
+            0.7470532839176134,
+            0.7909233167531361,
+            0.9067889152547497,
+            0.7890198059152784
+          ],
+          "mean": 0.7010610977609787,
+          "std": 0.1267053111750439,
+          "n": 10
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.3458463258670629,
+              0.36682471355725066,
+              0.42183514281978285,
+              0.30525046054066046
+            ],
+            "mean": 0.3599391606961892,
+            "std": 0.04853859412697303,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.6254712175241977,
+              0.6616403464085583,
+              0.6964849719816607,
+              0.5629139072847682
+            ],
+            "mean": 0.6366276107997962,
+            "std": 0.0570576194944236,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8984074684239429,
+              0.90426505583013,
+              0.8887058392824455,
+              0.8846787479406919
+            ],
+            "mean": 0.8940142778693025,
+            "std": 0.008938870385941468,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6931407942238267,
+              0.6895306859205776,
+              0.6931407942238267,
+              0.6353790613718412
+            ],
+            "mean": 0.677797833935018,
+            "std": 0.028330342640177,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.944954128440367,
+              0.9311926605504587,
+              0.9288990825688074,
+              0.9426605504587156
+            ],
+            "mean": 0.9369266055045872,
+            "std": 0.008054781156615226,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli",
+            "tasks": [
+              "cola",
+              "mnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/cola__mnli.json",
+            "average_primary_score": 0.48565877169563026,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.3458463258670629
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6254712175241977
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli",
+            "tasks": [
+              "cola",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/cola__qnli.json",
+            "average_primary_score": 0.6326160909905968,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.36682471355725066
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8984074684239429
+              }
+            }
+          },
+          {
+            "subset_id": "cola__rte",
+            "tasks": [
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/cola__rte.json",
+            "average_primary_score": 0.5574879685218048,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.42183514281978285
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6931407942238267
+              }
+            }
+          },
+          {
+            "subset_id": "cola__sst2",
+            "tasks": [
+              "cola",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/cola__sst2.json",
+            "average_primary_score": 0.6251022944905137,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.30525046054066046
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.944954128440367
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli",
+            "tasks": [
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/mnli__qnli.json",
+            "average_primary_score": 0.7829527011193441,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6616403464085583
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.90426505583013
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte",
+            "tasks": [
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/mnli__rte.json",
+            "average_primary_score": 0.6930078289511192,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6964849719816607
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6895306859205776
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__sst2",
+            "tasks": [
+              "mnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/mnli__sst2.json",
+            "average_primary_score": 0.7470532839176134,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.5629139072847682
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9311926605504587
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__rte",
+            "tasks": [
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/qnli__rte.json",
+            "average_primary_score": 0.7909233167531361,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8887058392824455
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6931407942238267
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__sst2",
+            "tasks": [
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/qnli__sst2.json",
+            "average_primary_score": 0.9067889152547497,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8846787479406919
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9288990825688074
+              }
+            }
+          },
+          {
+            "subset_id": "rte__sst2",
+            "tasks": [
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_baseline/rte__sst2.json",
+            "average_primary_score": 0.7890198059152784,
+            "per_task_primary": {
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6353790613718412
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9426605504587156
+              }
+            }
+          }
+        ]
+      },
+      "3": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.5362641030035085,
+            0.4784742344114097,
+            0.6462582047403621,
+            0.6753718037042238,
+            0.6780693008335681
+          ],
+          "mean": 0.6028875293386144,
+          "std": 0.09042211174749383,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.28778579540988364,
+              0.2685069642286916,
+              0.24234496320768026
+            ],
+            "mean": 0.26621257428208517,
+            "std": 0.022807136530645783,
+            "n": 3
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.45573102394294446,
+              0.5062659195109527,
+              0.49291900152827306,
+              0.44330106979113604
+            ],
+            "mean": 0.47455425369332654,
+            "std": 0.02985503416081214,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8652754896576972,
+              0.8237232289950577,
+              0.8689364817865641
+            ],
+            "mean": 0.8526450668131064,
+            "std": 0.02511384564183746,
+            "n": 3
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6606498194945848,
+              0.6642599277978339,
+              0.6895306859205776
+            ],
+            "mean": 0.6714801444043322,
+            "std": 0.015736097269099938,
+            "n": 3
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.8727064220183486,
+              0.9013761467889908
+            ],
+            "mean": 0.8870412844036697,
+            "std": 0.020272556800073054,
+            "n": 2
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_baseline/cola__mnli__qnli.json",
+            "average_primary_score": 0.5362641030035085,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.28778579540988364
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.45573102394294446
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8652754896576972
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_baseline/cola__mnli__rte.json",
+            "average_primary_score": 0.4784742344114097,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.2685069642286916
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.5062659195109527
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6606498194945848
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_baseline/cola__qnli__sst2.json",
+            "average_primary_score": 0.6462582047403621,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.24234496320768026
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8237232289950577
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8727064220183486
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_baseline/mnli__qnli__rte.json",
+            "average_primary_score": 0.6753718037042238,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.49291900152827306
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8689364817865641
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6642599277978339
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_baseline/mnli__rte__sst2.json",
+            "average_primary_score": 0.6780693008335681,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.44330106979113604
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6895306859205776
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9013761467889908
+              }
+            }
+          }
+        ]
+      },
+      "4": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.529917326129969,
+            0.5434384012933919,
+            0.515926830425096,
+            0.5897992803228334,
+            0.6534789581499191
+          ],
+          "mean": 0.5665121592642419,
+          "std": 0.05598207241699453,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.23832631780733707,
+              0.22159596252946018,
+              0.19250223615959458,
+              0.17211562188704022
+            ],
+            "mean": 0.20613503459585802,
+            "std": 0.02954371135355404,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.4056036678553235,
+              0.3607743250127356,
+              0.39327559857361183,
+              0.3706571574121243
+            ],
+            "mean": 0.3825776872134488,
+            "std": 0.020511189840260752,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8259198242723779,
+              0.8046860699249496,
+              0.7785099762035511,
+              0.8120080541826835
+            ],
+            "mean": 0.8052809811458905,
+            "std": 0.019901892558461733,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6498194945848376,
+              0.628158844765343,
+              0.592057761732852,
+              0.6353790613718412
+            ],
+            "mean": 0.6263537906137184,
+            "std": 0.0245734992258269,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.786697247706422,
+              0.8497706422018348,
+              0.8165137614678899,
+              0.7958715596330275
+            ],
+            "mean": 0.8122133027522935,
+            "std": 0.02797123120262821,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_baseline/cola__mnli__qnli__rte.json",
+            "average_primary_score": 0.529917326129969,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.23832631780733707
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4056036678553235
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8259198242723779
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6498194945848376
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__qnli__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_baseline/cola__mnli__qnli__sst2.json",
+            "average_primary_score": 0.5434384012933919,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.22159596252946018
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.3607743250127356
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8046860699249496
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.786697247706422
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_baseline/cola__mnli__rte__sst2.json",
+            "average_primary_score": 0.515926830425096,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.19250223615959458
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.39327559857361183
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.628158844765343
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8497706422018348
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_baseline/cola__qnli__rte__sst2.json",
+            "average_primary_score": 0.5897992803228334,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.17211562188704022
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7785099762035511
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.592057761732852
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8165137614678899
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_baseline/mnli__qnli__rte__sst2.json",
+            "average_primary_score": 0.6534789581499191,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.3706571574121243
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8120080541826835
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6353790613718412
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7958715596330275
+              }
+            }
+          }
+        ]
+      },
+      "5": {
+        "subset_count": 1,
+        "average_primary_score": {
+          "values": [
+            0.5330770004571226
+          ],
+          "mean": 0.5330770004571226,
+          "std": 0.0,
+          "n": 1
+        },
+        "per_task_primary": {
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.7454128440366973
+            ],
+            "mean": 0.7454128440366973,
+            "std": 0.0,
+            "n": 1
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.35354049923586345
+            ],
+            "mean": 0.35354049923586345,
+            "std": 0.0,
+            "n": 1
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.7759472817133443
+            ],
+            "mean": 0.7759472817133443,
+            "std": 0.0,
+            "n": 1
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.17676596574736192
+            ],
+            "mean": 0.17676596574736192,
+            "std": 0.0,
+            "n": 1
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6137184115523465
+            ],
+            "mean": 0.6137184115523465,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "sst2__mnli__qnli__cola__rte",
+            "tasks": [
+              "sst2",
+              "mnli",
+              "qnli",
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_restored_heads/gpa_ties/baseline/trim_30/lambda_1.json",
+            "average_primary_score": 0.5330770004571226,
+            "per_task_primary": {
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7454128440366973
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.35354049923586345
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7759472817133443
+              },
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.17676596574736192
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6137184115523465
+              }
+            }
+          }
+        ]
+      }
+    },
+    "gpa_dgpa_saties_wb_0p5": {
+      "2": {
+        "subset_count": 10,
+        "average_primary_score": {
+          "values": [
+            0.4881431979974462,
+            0.6749487168085522,
+            0.5377260084324619,
+            0.694984941511309,
+            0.7504652844976005,
+            0.6602821879867807,
+            0.6840551930905233,
+            0.776670558948912,
+            0.9047487098361454,
+            0.8108708972278342
+          ],
+          "mean": 0.6982895696337565,
+          "std": 0.12306767145398208,
+          "n": 10
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.5654865997646326,
+              0.5153742778418894,
+              0.38953143924759526,
+              0.4863001582519757
+            ],
+            "mean": 0.48917311877652325,
+            "std": 0.07404270461117317,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.4107997962302598,
+              0.5897096281202241,
+              0.5010697911360164,
+              0.4174223127865512
+            ],
+            "mean": 0.47975038206826287,
+            "std": 0.08403278031638138,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8345231557752151,
+              0.9112209408749771,
+              0.7988284825187626,
+              0.8645432912319239
+            ],
+            "mean": 0.8522789676002196,
+            "std": 0.04759829498582707,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6859205776173285,
+              0.8194945848375451,
+              0.7545126353790613,
+              0.7111913357400722
+            ],
+            "mean": 0.7427797833935018,
+            "std": 0.05846258029134169,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.9036697247706422,
+              0.9506880733944955,
+              0.944954128440367,
+              0.9105504587155964
+            ],
+            "mean": 0.9274655963302753,
+            "std": 0.02378723453290314,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli",
+            "tasks": [
+              "cola",
+              "mnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/cola__mnli.json",
+            "average_primary_score": 0.4881431979974462,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.5654865997646326
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4107997962302598
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli",
+            "tasks": [
+              "cola",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/cola__qnli.json",
+            "average_primary_score": 0.6749487168085522,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.5153742778418894
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8345231557752151
+              }
+            }
+          },
+          {
+            "subset_id": "cola__rte",
+            "tasks": [
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/cola__rte.json",
+            "average_primary_score": 0.5377260084324619,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.38953143924759526
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6859205776173285
+              }
+            }
+          },
+          {
+            "subset_id": "cola__sst2",
+            "tasks": [
+              "cola",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/cola__sst2.json",
+            "average_primary_score": 0.694984941511309,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.4863001582519757
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9036697247706422
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli",
+            "tasks": [
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/mnli__qnli.json",
+            "average_primary_score": 0.7504652844976005,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.5897096281202241
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9112209408749771
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte",
+            "tasks": [
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/mnli__rte.json",
+            "average_primary_score": 0.6602821879867807,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.5010697911360164
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.8194945848375451
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__sst2",
+            "tasks": [
+              "mnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/mnli__sst2.json",
+            "average_primary_score": 0.6840551930905233,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4174223127865512
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9506880733944955
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__rte",
+            "tasks": [
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/qnli__rte.json",
+            "average_primary_score": 0.776670558948912,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7988284825187626
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7545126353790613
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__sst2",
+            "tasks": [
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/qnli__sst2.json",
+            "average_primary_score": 0.9047487098361454,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8645432912319239
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.944954128440367
+              }
+            }
+          },
+          {
+            "subset_id": "rte__sst2",
+            "tasks": [
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/gpa_dgpa_saties_wb_0p5/rte__sst2.json",
+            "average_primary_score": 0.8108708972278342,
+            "per_task_primary": {
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7111913357400722
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9105504587155964
+              }
+            }
+          }
+        ]
+      },
+      "3": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.54740219284639,
+            0.5031295041830045,
+            0.6577055575118813,
+            0.6712465374480076,
+            0.6792317759708068
+          ],
+          "mean": 0.6117431135920179,
+          "std": 0.08084644933854422,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.46654885649873884,
+              0.36860311629227077,
+              0.3835031842986804
+            ],
+            "mean": 0.4062183856965633,
+            "std": 0.05277620000585511,
+            "n": 3
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.35394803871625063,
+              0.4007131940906775,
+              0.39602649006622515,
+              0.37768721344880285
+            ],
+            "mean": 0.382093734080489,
+            "std": 0.021232079283033497,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8217096833241808,
+              0.7581914698883397,
+              0.8198791872597474
+            ],
+            "mean": 0.7999267801574227,
+            "std": 0.03615542520014029,
+            "n": 3
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.740072202166065,
+              0.7978339350180506,
+              0.7689530685920578
+            ],
+            "mean": 0.7689530685920577,
+            "std": 0.0288808664259928,
+            "n": 3
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.8314220183486238,
+              0.8910550458715596
+            ],
+            "mean": 0.8612385321100917,
+            "std": 0.0421669181441519,
+            "n": 2
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_dgpa_saties_wb_0p5/cola__mnli__qnli.json",
+            "average_primary_score": 0.54740219284639,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.46654885649873884
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.35394803871625063
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8217096833241808
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_dgpa_saties_wb_0p5/cola__mnli__rte.json",
+            "average_primary_score": 0.5031295041830045,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.36860311629227077
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4007131940906775
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.740072202166065
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_dgpa_saties_wb_0p5/cola__qnli__sst2.json",
+            "average_primary_score": 0.6577055575118813,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.3835031842986804
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7581914698883397
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8314220183486238
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_dgpa_saties_wb_0p5/mnli__qnli__rte.json",
+            "average_primary_score": 0.6712465374480076,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.39602649006622515
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8198791872597474
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7978339350180506
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/gpa_dgpa_saties_wb_0p5/mnli__rte__sst2.json",
+            "average_primary_score": 0.6792317759708068,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.37768721344880285
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7689530685920578
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8910550458715596
+              }
+            }
+          }
+        ]
+      },
+      "4": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.5359555906175913,
+            0.5592172331935858,
+            0.5334800060897038,
+            0.5911117147869414,
+            0.6615331072171026
+          ],
+          "mean": 0.576259530380985,
+          "std": 0.05300260710690795,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.2984722450443177,
+              0.33666246616499174,
+              0.2682945156072465,
+              0.24887678681810163
+            ],
+            "mean": 0.28807650340866436,
+            "std": 0.038282337281790806,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.37157412124299544,
+              0.33601630157921547,
+              0.36892511462047883,
+              0.34936321956189503
+            ],
+            "mean": 0.3564696892511462,
+            "std": 0.016853530447455682,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.76258466044298,
+              0.76258466044298,
+              0.7160900604063701,
+              0.7634999084751968
+            ],
+            "mean": 0.7511898224418817,
+            "std": 0.023403818628874123,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.7111913357400722,
+              0.6859205776173285,
+              0.6425992779783394,
+              0.7075812274368231
+            ],
+            "mean": 0.6868231046931408,
+            "std": 0.031523915517279726,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.801605504587156,
+              0.8107798165137615,
+              0.7568807339449541,
+              0.8256880733944955
+            ],
+            "mean": 0.7987385321100917,
+            "std": 0.02961736598657102,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_dgpa_saties_wb_0p5/cola__mnli__qnli__rte.json",
+            "average_primary_score": 0.5359555906175913,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.2984722450443177
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.37157412124299544
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.76258466044298
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7111913357400722
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__qnli__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_dgpa_saties_wb_0p5/cola__mnli__qnli__sst2.json",
+            "average_primary_score": 0.5592172331935858,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.33666246616499174
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.33601630157921547
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.76258466044298
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.801605504587156
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_dgpa_saties_wb_0p5/cola__mnli__rte__sst2.json",
+            "average_primary_score": 0.5334800060897038,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.2682945156072465
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.36892511462047883
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6859205776173285
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8107798165137615
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_dgpa_saties_wb_0p5/cola__qnli__rte__sst2.json",
+            "average_primary_score": 0.5911117147869414,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.24887678681810163
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7160900604063701
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6425992779783394
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7568807339449541
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/gpa_dgpa_saties_wb_0p5/mnli__qnli__rte__sst2.json",
+            "average_primary_score": 0.6615331072171026,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.34936321956189503
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7634999084751968
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.7075812274368231
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8256880733944955
+              }
+            }
+          }
+        ]
+      },
+      "5": {
+        "subset_count": 1,
+        "average_primary_score": {
+          "values": [
+            0.5433182025515573
+          ],
+          "mean": 0.5433182025515573,
+          "std": 0.0,
+          "n": 1
+        },
+        "per_task_primary": {
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.7362385321100917
+            ],
+            "mean": 0.7362385321100917,
+            "std": 0.0,
+            "n": 1
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.3525216505348956
+            ],
+            "mean": 0.3525216505348956,
+            "std": 0.0,
+            "n": 1
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.7261577887607542
+            ],
+            "mean": 0.7261577887607542,
+            "std": 0.0,
+            "n": 1
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.23019289694771214
+            ],
+            "mean": 0.23019289694771214,
+            "std": 0.0,
+            "n": 1
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6714801444043321
+            ],
+            "mean": 0.6714801444043321,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "sst2__mnli__qnli__cola__rte",
+            "tasks": [
+              "sst2",
+              "mnli",
+              "qnli",
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_restored_heads/gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_1.json",
+            "average_primary_score": 0.5433182025515573,
+            "per_task_primary": {
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7362385321100917
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.3525216505348956
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7261577887607542
+              },
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.23019289694771214
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6714801444043321
+              }
+            }
+          }
+        ]
+      }
+    },
+    "ties": {
+      "2": {
+        "subset_count": 10,
+        "average_primary_score": {
+          "values": [
+            0.45781243632451857,
+            0.517131768758092,
+            0.7239975861688777,
+            0.5231389725428175,
+            0.8923830568985875,
+            0.6431017138359285,
+            0.8990217533544893,
+            0.7307313856062213,
+            0.9434503717250494,
+            0.7457626767793859
+          ],
+          "mean": 0.7076531721993968,
+          "std": 0.17176555104215052,
+          "n": 10
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.025049223132990333,
+              0.09338856039738465,
+              0.6285005875002102,
+              0.0806816148104056
+            ],
+            "mean": 0.2069049964602477,
+            "std": 0.2826261889306119,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8905756495160468,
+              0.8869077941925624,
+              0.8854814060112073,
+              0.8886398369842079
+            ],
+            "mean": 0.8879011716760061,
+            "std": 0.0022015542124873264,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.9408749771187992,
+              0.8978583196046128,
+              0.9416071755445726,
+              0.9339190920739521
+            ],
+            "mean": 0.9285648910854842,
+            "std": 0.020762148270303264,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.8194945848375451,
+              0.4007220216606498,
+              0.51985559566787,
+              0.5270758122743683
+            ],
+            "mean": 0.5667870036101083,
+            "std": 0.1781555833239027,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.9655963302752294,
+              0.9094036697247706,
+              0.9529816513761468,
+              0.9644495412844036
+            ],
+            "mean": 0.9481077981651376,
+            "std": 0.026423886460250824,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli",
+            "tasks": [
+              "cola",
+              "mnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/cola__mnli.json",
+            "average_primary_score": 0.45781243632451857,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.025049223132990333
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8905756495160468
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli",
+            "tasks": [
+              "cola",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/cola__qnli.json",
+            "average_primary_score": 0.517131768758092,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.09338856039738465
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9408749771187992
+              }
+            }
+          },
+          {
+            "subset_id": "cola__rte",
+            "tasks": [
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/cola__rte.json",
+            "average_primary_score": 0.7239975861688777,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.6285005875002102
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.8194945848375451
+              }
+            }
+          },
+          {
+            "subset_id": "cola__sst2",
+            "tasks": [
+              "cola",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/cola__sst2.json",
+            "average_primary_score": 0.5231389725428175,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.0806816148104056
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9655963302752294
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli",
+            "tasks": [
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/mnli__qnli.json",
+            "average_primary_score": 0.8923830568985875,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8869077941925624
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8978583196046128
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte",
+            "tasks": [
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/mnli__rte.json",
+            "average_primary_score": 0.6431017138359285,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8854814060112073
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.4007220216606498
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__sst2",
+            "tasks": [
+              "mnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/mnli__sst2.json",
+            "average_primary_score": 0.8990217533544893,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8886398369842079
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9094036697247706
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__rte",
+            "tasks": [
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/qnli__rte.json",
+            "average_primary_score": 0.7307313856062213,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9416071755445726
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.51985559566787
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__sst2",
+            "tasks": [
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/qnli__sst2.json",
+            "average_primary_score": 0.9434503717250494,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9339190920739521
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9529816513761468
+              }
+            }
+          },
+          {
+            "subset_id": "rte__sst2",
+            "tasks": [
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/ties/rte__sst2.json",
+            "average_primary_score": 0.7457626767793859,
+            "per_task_primary": {
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5270758122743683
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9644495412844036
+              }
+            }
+          }
+        ]
+      },
+      "3": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.5968450561626809,
+            0.452979302966858,
+            0.6391712071762425,
+            0.7533926565825553,
+            0.7333284734174934
+          ],
+          "mean": 0.6351433392611661,
+          "std": 0.12071654810291917,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.015667329278145823,
+              0.0405017129211642,
+              0.04431493881415232
+            ],
+            "mean": 0.03349466033782078,
+            "std": 0.015556203664814156,
+            "n": 3
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8687722873153336,
+              0.8563423331635253,
+              0.8469689251146205,
+              0.8576668364747835
+            ],
+            "mean": 0.8574375955170657,
+            "std": 0.008931600252223044,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.9060955518945635,
+              0.9282445542742083,
+              0.9114039904814205
+            ],
+            "mean": 0.9152480322167307,
+            "std": 0.01156404208097164,
+            "n": 3
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.4620938628158845,
+              0.5018050541516246,
+              0.45126353790613716
+            ],
+            "mean": 0.4717208182912154,
+            "std": 0.02661052272863538,
+            "n": 3
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.944954128440367,
+              0.8910550458715596
+            ],
+            "mean": 0.9180045871559632,
+            "std": 0.03811240678413733,
+            "n": 2
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/ties/cola__mnli__qnli.json",
+            "average_primary_score": 0.5968450561626809,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.015667329278145823
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8687722873153336
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9060955518945635
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/ties/cola__mnli__rte.json",
+            "average_primary_score": 0.452979302966858,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.0405017129211642
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8563423331635253
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.4620938628158845
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/ties/cola__qnli__sst2.json",
+            "average_primary_score": 0.6391712071762425,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.04431493881415232
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9282445542742083
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.944954128440367
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/ties/mnli__qnli__rte.json",
+            "average_primary_score": 0.7533926565825553,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8469689251146205
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9114039904814205
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5018050541516246
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/ties/mnli__rte__sst2.json",
+            "average_primary_score": 0.7333284734174934,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8576668364747835
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.45126353790613716
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8910550458715596
+              }
+            }
+          }
+        ]
+      },
+      "4": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.5704445157236383,
+            0.6165497967764082,
+            0.5478677680613208,
+            0.603516518830599,
+            0.7468073248071602
+          ],
+          "mean": 0.6170371848398253,
+          "std": 0.07742515775968435,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.0561878671490434,
+              -0.00017274917967598883,
+              0.014741647185826526,
+              0.07724829348482487
+            ],
+            "mean": 0.0370012646600047,
+            "std": 0.03589497141823537,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8027508914926134,
+              0.8245542536933266,
+              0.7992868059093224,
+              0.8031584309730005
+            ],
+            "mean": 0.8074375955170657,
+            "std": 0.01154255607394734,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.9029837085850265,
+              0.8918176825919825,
+              0.9157971810360608,
+              0.8943803770821893
+            ],
+            "mean": 0.9012447373238148,
+            "std": 0.010813362743833498,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.51985559566787,
+              0.49097472924187724,
+              0.49097472924187724,
+              0.5270758122743683
+            ],
+            "mean": 0.5072202166064982,
+            "std": 0.018988849383946467,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.75,
+              0.8864678899082569,
+              0.930045871559633,
+              0.7626146788990825
+            ],
+            "mean": 0.8322821100917431,
+            "std": 0.0896618618306357,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/ties/cola__mnli__qnli__rte.json",
+            "average_primary_score": 0.5704445157236383,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.0561878671490434
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8027508914926134
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9029837085850265
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.51985559566787
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__qnli__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/ties/cola__mnli__qnli__sst2.json",
+            "average_primary_score": 0.6165497967764082,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": -0.00017274917967598883
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8245542536933266
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8918176825919825
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.75
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/ties/cola__mnli__rte__sst2.json",
+            "average_primary_score": 0.5478677680613208,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.014741647185826526
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.7992868059093224
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.49097472924187724
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8864678899082569
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/ties/cola__qnli__rte__sst2.json",
+            "average_primary_score": 0.603516518830599,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.07724829348482487
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9157971810360608
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.49097472924187724
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.930045871559633
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/ties/mnli__qnli__rte__sst2.json",
+            "average_primary_score": 0.7468073248071602,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.8031584309730005
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8943803770821893
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5270758122743683
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7626146788990825
+              }
+            }
+          }
+        ]
+      },
+      "5": {
+        "subset_count": 1,
+        "average_primary_score": {
+          "values": [
+            0.5909428760356737
+          ],
+          "mean": 0.5909428760356737,
+          "std": 0.0,
+          "n": 1
+        },
+        "per_task_primary": {
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.7454128440366973
+            ],
+            "mean": 0.7454128440366973,
+            "std": 0.0,
+            "n": 1
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.7278655119714722
+            ],
+            "mean": 0.7278655119714722,
+            "std": 0.0,
+            "n": 1
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8855939959729087
+            ],
+            "mean": 0.8855939959729087,
+            "std": 0.0,
+            "n": 1
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.0687662159229228
+            ],
+            "mean": 0.0687662159229228,
+            "std": 0.0,
+            "n": 1
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.5270758122743683
+            ],
+            "mean": 0.5270758122743683,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "sst2__mnli__qnli__cola__rte",
+            "tasks": [
+              "sst2",
+              "mnli",
+              "qnli",
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_restored_heads/ties/trim_30/lambda_1.json",
+            "average_primary_score": 0.5909428760356737,
+            "per_task_primary": {
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7454128440366973
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.7278655119714722
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8855939959729087
+              },
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.0687662159229228
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5270758122743683
+              }
+            }
+          }
+        ]
+      }
+    },
+    "lr_knots": {
+      "2": {
+        "subset_count": 10,
+        "average_primary_score": {
+          "values": [
+            0.4809718022118872,
+            0.6164041161030237,
+            0.4967375491288813,
+            0.5930814850531108,
+            0.7666329101931402,
+            0.6584859614051284,
+            0.7718422116494599,
+            0.7930792710528525,
+            0.9100783502696204,
+            0.7973019408472162
+          ],
+          "mean": 0.688461559791432,
+          "std": 0.14140817794961144,
+          "n": 10
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.27921308990518034,
+              0.33019062283390754,
+              0.31116462894368313,
+              0.23662168570255174
+            ],
+            "mean": 0.2892975068463307,
+            "std": 0.04093431959537246,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.682730514518594,
+              0.6421803362200713,
+              0.6996434029546612,
+              0.6411614875191034
+            ],
+            "mean": 0.6664289353031074,
+            "std": 0.02941304031265773,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.9026176093721399,
+              0.891085484166209,
+              0.9002379644883763,
+              0.8958447739337361
+            ],
+            "mean": 0.8974464579901154,
+            "std": 0.005084640103636583,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.6823104693140795,
+              0.6173285198555957,
+              0.6859205776173285,
+              0.6462093862815884
+            ],
+            "mean": 0.657942238267148,
+            "std": 0.03247425696393174,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.9495412844036697,
+              0.9025229357798165,
+              0.9243119266055045,
+              0.948394495412844
+            ],
+            "mean": 0.9311926605504587,
+            "std": 0.022374633985721575,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli",
+            "tasks": [
+              "cola",
+              "mnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/cola__mnli.json",
+            "average_primary_score": 0.4809718022118872,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.27921308990518034
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.682730514518594
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli",
+            "tasks": [
+              "cola",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/cola__qnli.json",
+            "average_primary_score": 0.6164041161030237,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.33019062283390754
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9026176093721399
+              }
+            }
+          },
+          {
+            "subset_id": "cola__rte",
+            "tasks": [
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/cola__rte.json",
+            "average_primary_score": 0.4967375491288813,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.31116462894368313
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6823104693140795
+              }
+            }
+          },
+          {
+            "subset_id": "cola__sst2",
+            "tasks": [
+              "cola",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/cola__sst2.json",
+            "average_primary_score": 0.5930814850531108,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.23662168570255174
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9495412844036697
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli",
+            "tasks": [
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/mnli__qnli.json",
+            "average_primary_score": 0.7666329101931402,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6421803362200713
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.891085484166209
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte",
+            "tasks": [
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/mnli__rte.json",
+            "average_primary_score": 0.6584859614051284,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6996434029546612
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6173285198555957
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__sst2",
+            "tasks": [
+              "mnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/mnli__sst2.json",
+            "average_primary_score": 0.7718422116494599,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.6411614875191034
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9025229357798165
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__rte",
+            "tasks": [
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/qnli__rte.json",
+            "average_primary_score": 0.7930792710528525,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.9002379644883763
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6859205776173285
+              }
+            }
+          },
+          {
+            "subset_id": "qnli__sst2",
+            "tasks": [
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/qnli__sst2.json",
+            "average_primary_score": 0.9100783502696204,
+            "per_task_primary": {
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8958447739337361
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.9243119266055045
+              }
+            }
+          },
+          {
+            "subset_id": "rte__sst2",
+            "tasks": [
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_2/lr_knots/rte__sst2.json",
+            "average_primary_score": 0.7973019408472162,
+            "per_task_primary": {
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.6462093862815884
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.948394495412844
+              }
+            }
+          }
+        ]
+      },
+      "3": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.5014999187716871,
+            0.4288747416830449,
+            0.6301229675321974,
+            0.6376759071207204,
+            0.6433777438390257
+          ],
+          "mean": 0.5683102557893351,
+          "std": 0.09769009213607732,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.19871064233017396,
+              0.1745766150217506,
+              0.16570112083874533
+            ],
+            "mean": 0.17966279273022331,
+            "std": 0.01708241874076665,
+            "n": 3
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.4644931227712685,
+              0.5308201732042792,
+              0.47967396841569027,
+              0.4789607743250127
+            ],
+            "mean": 0.48848700967906267,
+            "std": 0.029075890352245434,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.8412959912136189,
+              0.8508145707486728,
+              0.8412959912136189
+            ],
+            "mean": 0.8444688510586369,
+            "std": 0.005495554456866274,
+            "n": 3
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.5812274368231047,
+              0.592057761732852,
+              0.5956678700361011
+            ],
+            "mean": 0.5896510228640193,
+            "std": 0.007515039709263999,
+            "n": 3
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.8738532110091743,
+              0.8555045871559633
+            ],
+            "mean": 0.8646788990825689,
+            "std": 0.012974436352046743,
+            "n": 2
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/lr_knots/cola__mnli__qnli.json",
+            "average_primary_score": 0.5014999187716871,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.19871064233017396
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4644931227712685
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8412959912136189
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/lr_knots/cola__mnli__rte.json",
+            "average_primary_score": 0.4288747416830449,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.1745766150217506
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.5308201732042792
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5812274368231047
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/lr_knots/cola__qnli__sst2.json",
+            "average_primary_score": 0.6301229675321974,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.16570112083874533
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8508145707486728
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8738532110091743
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/lr_knots/mnli__qnli__rte.json",
+            "average_primary_score": 0.6376759071207204,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.47967396841569027
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.8412959912136189
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.592057761732852
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_3/lr_knots/mnli__rte__sst2.json",
+            "average_primary_score": 0.6433777438390257,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4789607743250127
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5956678700361011
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8555045871559633
+              }
+            }
+          }
+        ]
+      },
+      "4": {
+        "subset_count": 5,
+        "average_primary_score": {
+          "values": [
+            0.4853547274237521,
+            0.5076278508843193,
+            0.47884502889157177,
+            0.5783041580035391,
+            0.6183633101111999
+          ],
+          "mean": 0.5336990150628764,
+          "std": 0.06161066705658177,
+          "n": 5
+        },
+        "per_task_primary": {
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.16209102316665785,
+              0.1463114195208278,
+              0.15305229979038343,
+              0.14217586683709474
+            ],
+            "mean": 0.15090765232874095,
+            "std": 0.008699362618984609,
+            "n": 4
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.4076413652572593,
+              0.3959246051961284,
+              0.41589403973509936,
+              0.39959246051961284
+            ],
+            "mean": 0.404763117677025,
+            "std": 0.00888888319401476,
+            "n": 4
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.7940691927512356,
+              0.7807065714808713,
+              0.7993776313380926,
+              0.7786930258099946
+            ],
+            "mean": 0.7882116053450485,
+            "std": 0.010098190537022819,
+            "n": 4
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.5776173285198556,
+              0.5631768953068592,
+              0.5631768953068592,
+              0.5703971119133574
+            ],
+            "mean": 0.5685920577617328,
+            "std": 0.0069128311029338415,
+            "n": 4
+          },
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.7075688073394495,
+              0.783256880733945,
+              0.8084862385321101,
+              0.7247706422018348
+            ],
+            "mean": 0.7560206422018348,
+            "std": 0.047674571451320716,
+            "n": 4
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "cola__mnli__qnli__rte",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/lr_knots/cola__mnli__qnli__rte.json",
+            "average_primary_score": 0.4853547274237521,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.16209102316665785
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.4076413652572593
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7940691927512356
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5776173285198556
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__qnli__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "qnli",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/lr_knots/cola__mnli__qnli__sst2.json",
+            "average_primary_score": 0.5076278508843193,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.1463114195208278
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.3959246051961284
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7807065714808713
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7075688073394495
+              }
+            }
+          },
+          {
+            "subset_id": "cola__mnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "mnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/lr_knots/cola__mnli__rte__sst2.json",
+            "average_primary_score": 0.47884502889157177,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.15305229979038343
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.41589403973509936
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5631768953068592
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.783256880733945
+              }
+            }
+          },
+          {
+            "subset_id": "cola__qnli__rte__sst2",
+            "tasks": [
+              "cola",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/lr_knots/cola__qnli__rte__sst2.json",
+            "average_primary_score": 0.5783041580035391,
+            "per_task_primary": {
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.14217586683709474
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7993776313380926
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5631768953068592
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.8084862385321101
+              }
+            }
+          },
+          {
+            "subset_id": "mnli__qnli__rte__sst2",
+            "tasks": [
+              "mnli",
+              "qnli",
+              "rte",
+              "sst2"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/ablation_N/N_4/lr_knots/mnli__qnli__rte__sst2.json",
+            "average_primary_score": 0.6183633101111999,
+            "per_task_primary": {
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.39959246051961284
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.7786930258099946
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5703971119133574
+              },
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.7247706422018348
+              }
+            }
+          }
+        ]
+      },
+      "5": {
+        "subset_count": 1,
+        "average_primary_score": {
+          "values": [
+            0.5026576386930066
+          ],
+          "mean": 0.5026576386930066,
+          "std": 0.0,
+          "n": 1
+        },
+        "per_task_primary": {
+          "sst2": {
+            "metric": "accuracy",
+            "values": [
+              0.6731651376146789
+            ],
+            "mean": 0.6731651376146789,
+            "std": 0.0,
+            "n": 1
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "values": [
+              0.37911360163015795
+            ],
+            "mean": 0.37911360163015795,
+            "std": 0.0,
+            "n": 1
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "values": [
+              0.742449203734212
+            ],
+            "mean": 0.742449203734212,
+            "std": 0.0,
+            "n": 1
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "values": [
+              0.14816313857262692
+            ],
+            "mean": 0.14816313857262692,
+            "std": 0.0,
+            "n": 1
+          },
+          "rte": {
+            "metric": "accuracy",
+            "values": [
+              0.5703971119133574
+            ],
+            "mean": 0.5703971119133574,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "subsets": [
+          {
+            "subset_id": "sst2__mnli__qnli__cola__rte",
+            "tasks": [
+              "sst2",
+              "mnli",
+              "qnli",
+              "cola",
+              "rte"
+            ],
+            "result_path": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_restored_heads/lr_knots/trim_30/lambda_1.json",
+            "average_primary_score": 0.5026576386930066,
+            "per_task_primary": {
+              "sst2": {
+                "metric": "accuracy",
+                "value": 0.6731651376146789
+              },
+              "mnli": {
+                "metric": "accuracy",
+                "value": 0.37911360163015795
+              },
+              "qnli": {
+                "metric": "accuracy",
+                "value": 0.742449203734212
+              },
+              "cola": {
+                "metric": "matthews_correlation",
+                "value": 0.14816313857262692
+              },
+              "rte": {
+                "metric": "accuracy",
+                "value": 0.5703971119133574
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

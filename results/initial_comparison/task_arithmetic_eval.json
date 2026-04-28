@@ -1,0 +1,2475 @@
+{
+  "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+  "evaluated_tasks": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "stored_lambda": 1.0,
+  "lambda_values": [
+    1.0
+  ],
+  "merge_metadata": {
+    "method": "task_arithmetic_exact_delta_space",
+    "formula": "DeltaW_merge = lambda * sum_i DeltaW_i",
+    "why_not_linear_factor_sum": "Adding LoRA A and B factors separately introduces cross-terms, so this adapter stores the exact weighted delta via concatenated factors.",
+    "source_tasks": [
+      "sst2",
+      "mnli",
+      "qnli",
+      "cola",
+      "rte"
+    ],
+    "lambda": 1.0,
+    "module_summaries": [
+      {
+        "module_name": "base_model.model.model.layers.0.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.36003875732422
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.815031051635742
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.095685958862305
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.869357109069824
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.936294078826904
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 9.149164199829102
+      },
+      {
+        "module_name": "base_model.model.model.layers.0.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.239670515060425
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 39.550323486328125
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.08114242553711
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.57413673400879
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.2936666011810303
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.3384904861450195
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 8.077341079711914
+      },
+      {
+        "module_name": "base_model.model.model.layers.1.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.6720166206359863
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.410465240478516
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.846220016479492
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.471923828125
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.8323206901550293
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.664126396179199
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.912225723266602
+      },
+      {
+        "module_name": "base_model.model.model.layers.10.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.7567951679229736
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 13.64676284790039
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.777114868164062
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.395851135253906
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.7440388202667236
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.4771270751953125
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.378041744232178
+      },
+      {
+        "module_name": "base_model.model.model.layers.11.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.8693459033966064
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 15.128729820251465
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.658550262451172
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.5313777923584
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.546314239501953
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.2962541580200195
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.99048376083374
+      },
+      {
+        "module_name": "base_model.model.model.layers.12.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.5752601623535156
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.012454986572266
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 21.11884117126465
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.274871826171875
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.8385539054870605
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.586603164672852
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.819127082824707
+      },
+      {
+        "module_name": "base_model.model.model.layers.13.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.327216148376465
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.921022415161133
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 21.047780990600586
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.552078247070312
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.557029962539673
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.388551712036133
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.756016254425049
+      },
+      {
+        "module_name": "base_model.model.model.layers.14.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.4434003829956055
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 14.996498107910156
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.53280258178711
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.03920555114746
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.4950132369995117
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.47557258605957
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 8.575026512145996
+      },
+      {
+        "module_name": "base_model.model.model.layers.15.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.806236743927002
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 15.93076229095459
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.1574764251709
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 14.974175453186035
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.4462242126464844
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.192091941833496
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.328183650970459
+      },
+      {
+        "module_name": "base_model.model.model.layers.16.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.3047664165496826
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 14.502970695495605
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.349124908447266
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.399364471435547
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.743363618850708
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.0068135261535645
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.668427467346191
+      },
+      {
+        "module_name": "base_model.model.model.layers.17.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.663970470428467
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 11.36329460144043
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.774600982666016
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.8651180267334
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.085498094558716
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.535446643829346
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 11.30073356628418
+      },
+      {
+        "module_name": "base_model.model.model.layers.18.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.484325647354126
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.861701011657715
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 18.752531051635742
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 12.351984024047852
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.140331745147705
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.601665735244751
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 10.257444381713867
+      },
+      {
+        "module_name": "base_model.model.model.layers.19.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.5036725997924805
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.335620880126953
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 23.31346893310547
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.646129608154297
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.826751470565796
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.828785419464111
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.668838977813721
+      },
+      {
+        "module_name": "base_model.model.model.layers.2.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.801643133163452
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.051721096038818
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 12.188249588012695
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 10.41315746307373
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.6333258152008057
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.7669570446014404
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.2447967529296875
+      },
+      {
+        "module_name": "base_model.model.model.layers.20.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.232677698135376
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 4.907770156860352
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 12.623434066772461
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.579796314239502
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.021141767501831
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.320706844329834
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.303928852081299
+      },
+      {
+        "module_name": "base_model.model.model.layers.21.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.2247754335403442
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.481065511703491
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 11.867602348327637
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.3646416664123535
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.9743406772613525
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.9412680864334106
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 9.942030906677246
+      },
+      {
+        "module_name": "base_model.model.model.layers.22.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.2099425792694092
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.0128045082092285
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 13.13308334350586
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.145851135253906
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.0351617336273193
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.03415846824646
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 8.499557495117188
+      },
+      {
+        "module_name": "base_model.model.model.layers.23.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.280432939529419
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.653792142868042
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 9.064349174499512
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.249371528625488
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.9775668382644653
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.0787510871887207
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 4.322249412536621
+      },
+      {
+        "module_name": "base_model.model.model.layers.24.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 0.824332594871521
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.270691156387329
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.331262588500977
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.278148174285889
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.44614839553833
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.7361929416656494
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.857394695281982
+      },
+      {
+        "module_name": "base_model.model.model.layers.25.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 0.9003382921218872
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.4607646465301514
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 11.730753898620605
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.63679838180542
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.471865177154541
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.5732431411743164
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 8.108678817749023
+      },
+      {
+        "module_name": "base_model.model.model.layers.26.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 0.7753385305404663
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 0.8138437271118164
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.49410629272461
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 25.977075576782227
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.3199973106384277
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 1.4462509155273438
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.017459392547607
+      },
+      {
+        "module_name": "base_model.model.model.layers.27.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.197146415710449
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.93902015686035
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 18.858375549316406
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.929176330566406
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.623664617538452
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.382862567901611
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.104832172393799
+      },
+      {
+        "module_name": "base_model.model.model.layers.3.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.9374544620513916
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.511995315551758
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.04219627380371
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.813467025756836
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.9205808639526367
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.830383777618408
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.177598476409912
+      },
+      {
+        "module_name": "base_model.model.model.layers.4.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.907698392868042
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.977203369140625
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 22.19007110595703
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.664297103881836
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.5040676593780518
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.278783321380615
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.4121928215026855
+      },
+      {
+        "module_name": "base_model.model.model.layers.5.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.0661420822143555
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.900161743164062
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 19.149442672729492
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.51387596130371
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.546159029006958
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.62913179397583
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.542860984802246
+      },
+      {
+        "module_name": "base_model.model.model.layers.6.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 3.2046256065368652
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.289491653442383
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 20.112701416015625
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.437992095947266
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.6220343112945557
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.152097702026367
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 7.1776652336120605
+      },
+      {
+        "module_name": "base_model.model.model.layers.7.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.9418327808380127
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.525760650634766
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 21.278364181518555
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.371522903442383
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.7010786533355713
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.290252208709717
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.397271633148193
+      },
+      {
+        "module_name": "base_model.model.model.layers.8.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.6236660480499268
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.mlp.down_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 16.855480194091797
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.mlp.gate_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 21.35753059387207
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.mlp.up_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 17.73691177368164
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.self_attn.k_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.670048236846924
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.self_attn.o_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 5.875552177429199
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.self_attn.q_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 6.661539554595947
+      },
+      {
+        "module_name": "base_model.model.model.layers.9.self_attn.v_proj",
+        "source_ranks": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "merged_rank": 80,
+        "merged_delta_frobenius_norm": 2.8603951930999756
+      }
+    ]
+  },
+  "runs": [
+    {
+      "lambda": 1.0,
+      "used_rescaled_copy": false,
+      "evaluated_adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+      "per_task": {
+        "sst2": {
+          "eval_loss": 0.7069209218025208,
+          "eval_model_preparation_time": 0.0025,
+          "eval_accuracy": 0.4896788990825688,
+          "eval_runtime": 1.7727,
+          "eval_samples_per_second": 491.898,
+          "eval_steps_per_second": 15.795,
+          "eval_samples": 872,
+          "task": "sst2",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+          "model_name": "Qwen/Qwen2.5-1.5B"
+        },
+        "mnli": {
+          "eval_loss": 1.1345765590667725,
+          "eval_model_preparation_time": 0.0026,
+          "eval_accuracy": 0.435048395313296,
+          "eval_runtime": 36.217,
+          "eval_samples_per_second": 271.006,
+          "eval_steps_per_second": 8.477,
+          "eval_samples": 9815,
+          "task": "mnli",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+          "model_name": "Qwen/Qwen2.5-1.5B"
+        },
+        "qnli": {
+          "eval_loss": 0.7152923941612244,
+          "eval_model_preparation_time": 0.003,
+          "eval_accuracy": 0.4946000366099213,
+          "eval_runtime": 25.3069,
+          "eval_samples_per_second": 215.87,
+          "eval_steps_per_second": 6.757,
+          "eval_samples": 5463,
+          "task": "qnli",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+          "model_name": "Qwen/Qwen2.5-1.5B"
+        },
+        "cola": {
+          "eval_loss": 0.8667879104614258,
+          "eval_model_preparation_time": 0.003,
+          "eval_matthews_correlation": 0.0,
+          "eval_runtime": 1.1746,
+          "eval_samples_per_second": 887.973,
+          "eval_steps_per_second": 28.095,
+          "eval_samples": 1043,
+          "task": "cola",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+          "model_name": "Qwen/Qwen2.5-1.5B"
+        },
+        "rte": {
+          "eval_loss": 0.6939437389373779,
+          "eval_model_preparation_time": 0.003,
+          "eval_accuracy": 0.5306859205776173,
+          "eval_runtime": 2.2235,
+          "eval_samples_per_second": 124.577,
+          "eval_steps_per_second": 4.048,
+          "eval_samples": 277,
+          "task": "rte",
+          "adapter_dir": "/home/md2503/av735/LoRA_Merging/merged_adapters/initial_comparison/task_arithmetic/lambda_1",
+          "model_name": "Qwen/Qwen2.5-1.5B"
+        }
+      },
+      "summary": {
+        "primary_metrics": {
+          "sst2": {
+            "metric": "accuracy",
+            "value": 0.4896788990825688
+          },
+          "mnli": {
+            "metric": "accuracy",
+            "value": 0.435048395313296
+          },
+          "qnli": {
+            "metric": "accuracy",
+            "value": 0.4946000366099213
+          },
+          "cola": {
+            "metric": "matthews_correlation",
+            "value": 0.0
+          },
+          "rte": {
+            "metric": "accuracy",
+            "value": 0.5306859205776173
+          }
+        },
+        "average_primary_score": 0.3900026503166807
+      }
+    }
+  ]
+}

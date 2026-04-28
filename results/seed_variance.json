@@ -1,0 +1,740 @@
+{
+  "step": "week3_step3_3_seed_variance",
+  "source_summary": "/home/md2503/av735/LoRA_Merging/results/statistical_significance/summary.json",
+  "tasks": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "method_aliases": [
+    "gpa_baseline",
+    "ties",
+    "lr_knots",
+    "gpa_dgpa_saties_wb_0p5"
+  ],
+  "lambda_overrides": {
+    "gpa_dgpa_saties_wb_0p5": 0.25
+  },
+  "methods": {
+    "gpa_baseline": {
+      "display_name": "GPA + TIES",
+      "selected_method_key": "gpa_baseline",
+      "hyperparameters": {
+        "lambda": 0.2,
+        "trim_percentage": 20,
+        "drop_probability": null,
+        "density": 0.8,
+        "b_weight_alpha": 0.0,
+        "normalise_a_factors": false,
+        "scale_aware_ties": false
+      },
+      "average_primary_score": {
+        "mean": 0.37069337774804806,
+        "std": 0.0018923210479991673,
+        "values": [
+          0.3696058268640332,
+          0.3695958720579182,
+          0.37287843432219264
+        ]
+      },
+      "tasks": {
+        "sst2": {
+          "metric": "accuracy",
+          "mean": 0.4984709480122324,
+          "std": 0.011313951519073958,
+          "values": [
+            0.4908256880733945,
+            0.49311926605504586,
+            0.5114678899082569
+          ]
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "mean": 0.3335031414501613,
+          "std": 0.0021428142712647006,
+          "values": [
+            0.3357106469689251,
+            0.3333672949566989,
+            0.3314314824248599
+          ]
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "mean": 0.49441698700347797,
+          "std": 0.0,
+          "values": [
+            0.49441698700347797,
+            0.49441698700347797,
+            0.49441698700347797
+          ]
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "rte": {
+          "metric": "accuracy",
+          "mean": 0.5270758122743683,
+          "std": 0.0,
+          "values": [
+            0.5270758122743683,
+            0.5270758122743683,
+            0.5270758122743683
+          ]
+        }
+      }
+    },
+    "ties": {
+      "display_name": "TIES-Merging",
+      "selected_method_key": "ties",
+      "hyperparameters": {
+        "lambda": 0.7,
+        "trim_percentage": 10,
+        "drop_probability": null,
+        "density": 0.9,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      },
+      "average_primary_score": {
+        "mean": 0.38401724175520285,
+        "std": 0.024980067002439155,
+        "values": [
+          0.4128333260345986,
+          0.37071767268618505,
+          0.3685007265448251
+        ]
+      },
+      "tasks": {
+        "sst2": {
+          "metric": "accuracy",
+          "mean": 0.5493119266055045,
+          "std": 0.09534224628819506,
+          "values": [
+            0.6594036697247706,
+            0.49426605504587157,
+            0.49426605504587157
+          ]
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "mean": 0.3491594498217015,
+          "std": 0.029883546244964233,
+          "values": [
+            0.38308711156393277,
+            0.33764645950076416,
+            0.32674477840040755
+          ]
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "mean": 0.49453902007444017,
+          "std": 0.00010568373955511203,
+          "values": [
+            0.4946000366099213,
+            0.4946000366099213,
+            0.49441698700347797
+          ]
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "rte": {
+          "metric": "accuracy",
+          "mean": 0.5270758122743683,
+          "std": 0.0,
+          "values": [
+            0.5270758122743683,
+            0.5270758122743683,
+            0.5270758122743683
+          ]
+        }
+      }
+    },
+    "lr_knots": {
+      "display_name": "LR-KnOTS + TIES",
+      "selected_method_key": "lr_knots",
+      "hyperparameters": {
+        "lambda": 0.5,
+        "trim_percentage": 10,
+        "drop_probability": null,
+        "density": 0.9,
+        "b_weight_alpha": null,
+        "normalise_a_factors": null,
+        "scale_aware_ties": null
+      },
+      "average_primary_score": {
+        "mean": 0.36861225464651054,
+        "std": 0.00203544580241115,
+        "values": [
+          0.36985035055226545,
+          0.3697233449859866,
+          0.3662630684012796
+        ]
+      },
+      "tasks": {
+        "sst2": {
+          "metric": "accuracy",
+          "mean": 0.48891437308868496,
+          "std": 0.006520918237474002,
+          "values": [
+            0.4908256880733945,
+            0.49426605504587157,
+            0.481651376146789
+          ]
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "mean": 0.3326541008660214,
+          "std": 0.004384602097065729,
+          "values": [
+            0.3369332654100866,
+            0.33285787060621497,
+            0.3281711665817626
+          ]
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "mean": 0.49441698700347797,
+          "std": 0.0,
+          "values": [
+            0.49441698700347797,
+            0.49441698700347797,
+            0.49441698700347797
+          ]
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "rte": {
+          "metric": "accuracy",
+          "mean": 0.5270758122743683,
+          "std": 0.0,
+          "values": [
+            0.5270758122743683,
+            0.5270758122743683,
+            0.5270758122743683
+          ]
+        }
+      }
+    },
+    "gpa_dgpa_saties_wb_0p5": {
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "selected_method_key": "gpa_dgpa_saties_wb_0p5",
+      "hyperparameters": {
+        "lambda": 0.25,
+        "trim_percentage": 20,
+        "drop_probability": null,
+        "density": 0.8,
+        "b_weight_alpha": 0.5,
+        "normalise_a_factors": true,
+        "scale_aware_ties": true,
+        "lambda_override_applied": true
+      },
+      "average_primary_score": {
+        "mean": 0.3706049217400343,
+        "std": 0.002204652543882202,
+        "values": [
+          0.36960061578008097,
+          0.3731329128165399,
+          0.369081236623482
+        ]
+      },
+      "tasks": {
+        "sst2": {
+          "metric": "accuracy",
+          "mean": 0.49694189602446476,
+          "std": 0.010655473902726541,
+          "values": [
+            0.4896788990825688,
+            0.5091743119266054,
+            0.4919724770642202
+          ]
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "mean": 0.33458991339786043,
+          "std": 0.002470576801422727,
+          "values": [
+            0.3368313805399898,
+            0.33499745287824756,
+            0.3319409067753439
+          ]
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "mean": 0.49441698700347797,
+          "std": 0.0,
+          "values": [
+            0.49441698700347797,
+            0.49441698700347797,
+            0.49441698700347797
+          ]
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "rte": {
+          "metric": "accuracy",
+          "mean": 0.5270758122743683,
+          "std": 0.0,
+          "values": [
+            0.5270758122743683,
+            0.5270758122743683,
+            0.5270758122743683
+          ]
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "ties_vs_gpa_baseline": {
+      "baseline_alias": "gpa_baseline",
+      "comparison_alias": "ties",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          0.0432274991705654,
+          0.0011218006282668336,
+          -0.004377707777367568
+        ],
+        "mean": 0.013323864007154887,
+        "std": 0.026042881852162254
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            0.1685779816513761,
+            0.001146788990825709,
+            -0.0172018348623853
+          ],
+          "mean": 0.05084097859327217,
+          "std": 0.1023751406160433
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            0.04737646459500766,
+            0.004279164544065239,
+            -0.0046867040244523706
+          ],
+          "mean": 0.015656308371540178,
+          "std": 0.02783384509779183
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            0.00018304960644333068,
+            0.00018304960644333068,
+            0.0
+          ],
+          "mean": 0.00012203307096222045,
+          "std": 0.00010568373955511203
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 3,
+      "average_primary_score_delta_ge_0p01": true,
+      "proposal_success_criterion_met": true
+    },
+    "lr_knots_vs_gpa_baseline": {
+      "baseline_alias": "gpa_baseline",
+      "comparison_alias": "lr_knots",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          0.00024452368823224546,
+          0.00012747292806836175,
+          -0.006615365920913052
+        ],
+        "mean": -0.002081123101537482,
+        "std": 0.003927205581441839
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.001146788990825709,
+            -0.029816513761467878
+          ],
+          "mean": -0.00955657492354739,
+          "std": 0.017554988537010756
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            0.0012226184411615049,
+            -0.0005094243504839557,
+            -0.003260315843097328
+          ],
+          "mean": -0.0008490405841399262,
+          "std": 0.002260681167008699
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 0,
+      "average_primary_score_delta_ge_0p01": false,
+      "proposal_success_criterion_met": false
+    },
+    "gpa_dgpa_saties_wb_0p5_vs_gpa_baseline": {
+      "baseline_alias": "gpa_baseline",
+      "comparison_alias": "gpa_dgpa_saties_wb_0p5",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          -5.211083952239015e-06,
+          0.003537040758621657,
+          -0.0037971976987106193
+        ],
+        "mean": -8.845600801373384e-05,
+        "std": 0.0036678277938433034
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            -0.001146788990825709,
+            0.016055045871559592,
+            -0.019495412844036664
+          ],
+          "mean": -0.0015290519877675934,
+          "std": 0.017778311856626088
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            0.0011207335710646804,
+            0.0016301579215486361,
+            0.0005094243504839557
+          ],
+          "mean": 0.0010867719476990907,
+          "std": 0.000561138109759146
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 1,
+      "average_primary_score_delta_ge_0p01": false,
+      "proposal_success_criterion_met": false
+    },
+    "gpa_baseline_vs_ties": {
+      "baseline_alias": "ties",
+      "comparison_alias": "gpa_baseline",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          -0.0432274991705654,
+          -0.0011218006282668336,
+          0.004377707777367568
+        ],
+        "mean": -0.013323864007154887,
+        "std": 0.026042881852162254
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            -0.1685779816513761,
+            -0.001146788990825709,
+            0.0172018348623853
+          ],
+          "mean": -0.05084097859327217,
+          "std": 0.1023751406160433
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.04737646459500766,
+            -0.004279164544065239,
+            0.0046867040244523706
+          ],
+          "mean": -0.015656308371540178,
+          "std": 0.02783384509779183
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.00018304960644333068,
+            -0.00018304960644333068,
+            0.0
+          ],
+          "mean": -0.00012203307096222045,
+          "std": 0.00010568373955511203
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 0,
+      "average_primary_score_delta_ge_0p01": false,
+      "proposal_success_criterion_met": false
+    },
+    "lr_knots_vs_ties": {
+      "baseline_alias": "ties",
+      "comparison_alias": "lr_knots",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          -0.04298297548233315,
+          -0.0009943277001984502,
+          -0.002237658143545497
+        ],
+        "mean": -0.015404987108692366,
+        "std": 0.023891315293124307
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            -0.1685779816513761,
+            0.0,
+            -0.012614678899082571
+          ],
+          "mean": -0.06039755351681956,
+          "std": 0.09389907419502406
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.04615384615384617,
+            -0.004788588894549192,
+            0.001426388181355043
+          ],
+          "mean": -0.016505348955680107,
+          "std": 0.025863718860498057
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.00018304960644333068,
+            -0.00018304960644333068,
+            0.0
+          ],
+          "mean": -0.00012203307096222045,
+          "std": 0.00010568373955511203
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 0,
+      "average_primary_score_delta_ge_0p01": false,
+      "proposal_success_criterion_met": false
+    },
+    "gpa_dgpa_saties_wb_0p5_vs_ties": {
+      "baseline_alias": "ties",
+      "comparison_alias": "gpa_dgpa_saties_wb_0p5",
+      "delta_direction": "comparison_minus_baseline",
+      "average_primary_score_delta": {
+        "values": [
+          -0.04323271025451763,
+          0.0024152401303548474,
+          0.0005805100786569089
+        ],
+        "mean": -0.013412316681835291,
+        "std": 0.02584150970029787
+      },
+      "task_deltas": {
+        "sst2": {
+          "metric": "accuracy",
+          "values": [
+            -0.1697247706422018,
+            0.014908256880733851,
+            -0.002293577981651387
+          ],
+          "mean": -0.05237003058103979,
+          "std": 0.10199572183060864
+        },
+        "mnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.046255731023942974,
+            -0.0026490066225166023,
+            0.005196128374936317
+          ],
+          "mean": -0.014569536423841086,
+          "std": 0.02771951854017373
+        },
+        "qnli": {
+          "metric": "accuracy",
+          "values": [
+            -0.00018304960644333068,
+            -0.00018304960644333068,
+            0.0
+          ],
+          "mean": -0.00012203307096222045,
+          "std": 0.00010568373955511203
+        },
+        "cola": {
+          "metric": "matthews_correlation",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "rte": {
+          "metric": "accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "std": 0.0
+        }
+      },
+      "positive_mean_delta_task_count": 0,
+      "average_primary_score_delta_ge_0p01": false,
+      "proposal_success_criterion_met": false
+    }
+  }
+}

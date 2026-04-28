@@ -1,0 +1,384 @@
+{
+  "experiment": "synthetic_exp2_convergence",
+  "description": "Convergence curves and runtime summaries for GPA on synthetic LoRA-like matrices.",
+  "parameters": {
+    "sigma": 0.1,
+    "baseline_num_adapters": 10,
+    "baseline_rank": 16,
+    "dimension": 1536,
+    "sweep_num_adapters": [
+      3,
+      5,
+      10,
+      20
+    ],
+    "sweep_ranks": [
+      8,
+      16,
+      32
+    ],
+    "sweep_trials": 20,
+    "max_iter": 100,
+    "tol": 1e-06,
+    "init": "first",
+    "seed": 0
+  },
+  "baseline_trial": {
+    "seed": 3653403230,
+    "iterations": 3,
+    "wall_clock_seconds": 0.013524300011340529,
+    "residual_trajectory": [
+      1.43764231414341,
+      1.4375862853481496,
+      1.4375862852857473
+    ],
+    "final_residual": 1.4375862852857473,
+    "monotone_nonincreasing": true
+  },
+  "baseline_summary": {
+    "sigma": 0.1,
+    "num_adapters": 10,
+    "rank": 16,
+    "dimension": 1536,
+    "tol": 1e-06,
+    "mean_residual_trajectory": [
+      1.43764231414341,
+      1.4375862853481496,
+      1.4375862852857473
+    ],
+    "iterations_mean": 3.0,
+    "wall_clock_seconds_mean": 0.013524300011340529,
+    "all_monotone_nonincreasing": true,
+    "final_residual_mean": 1.4375862852857473
+  },
+  "sweep_summaries": [
+    {
+      "sigma": 0.1,
+      "num_adapters": 3,
+      "rank": 8,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.0022370400052750482,
+      "wall_clock_seconds_std": 0.00025697589074604273,
+      "final_residual_mean": 0.15977512381324108,
+      "final_residual_std": 0.001474697818845581,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.1597764703612093,
+        0.1597751238283039,
+        0.15977512381324113
+      ],
+      "std_residual_trajectory": [
+        0.0014747458175755077,
+        0.0014746978196747119,
+        0.001474697818845581
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 3,
+      "rank": 16,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.0035761799954343587,
+      "wall_clock_seconds_std": 0.00032676192190841106,
+      "final_residual_mean": 0.31796916306712286,
+      "final_residual_std": 0.001568433555459994,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.31797442635295975,
+        0.3179691631268317,
+        0.3179691630671229
+      ],
+      "std_residual_trajectory": [
+        0.0015684635721908281,
+        0.0015684335574382487,
+        0.0015684335554599937
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 3,
+      "rank": 32,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.007778555003460497,
+      "wall_clock_seconds_std": 0.0006865369771654294,
+      "final_residual_mean": 0.6328745471790811,
+      "final_residual_std": 0.003065236567277626,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.6328954050815842,
+        0.6328745474239448,
+        0.6328745471790811
+      ],
+      "std_residual_trajectory": [
+        0.0030651244157094914,
+        0.0030652365681932197,
+        0.0030652365672776257
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 5,
+      "rank": 8,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.0037621699942974375,
+      "wall_clock_seconds_std": 0.0002717275788576133,
+      "final_residual_mean": 0.3201419196776215,
+      "final_residual_std": 0.001981456066481382,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.32014596332604034,
+        0.32014191969424827,
+        0.32014191967762157
+      ],
+      "std_residual_trajectory": [
+        0.001981442722093948,
+        0.001981456066497833,
+        0.001981456066481382
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 5,
+      "rank": 16,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.00548762499820441,
+      "wall_clock_seconds_std": 0.00042399902583353685,
+      "final_residual_mean": 0.6360003173688838,
+      "final_residual_std": 0.0019598913525996583,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.6360189152982387,
+        0.6360003174473792,
+        0.6360003173688836
+      ],
+      "std_residual_trajectory": [
+        0.001960421411605343,
+        0.0019598913550788423,
+        0.001959891352599658
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 5,
+      "rank": 32,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.012841720000142231,
+      "wall_clock_seconds_std": 0.000521565880680459,
+      "final_residual_mean": 1.2679472678387813,
+      "final_residual_std": 0.004446982848625785,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        1.2680236448353113,
+        1.2679472681817594,
+        1.2679472678387813
+      ],
+      "std_residual_trajectory": [
+        0.004447984055388196,
+        0.004446982855624082,
+        0.004446982848625784
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 10,
+      "rank": 8,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.007326855004066601,
+      "wall_clock_seconds_std": 0.0005217480250206305,
+      "final_residual_mean": 0.7171197002869076,
+      "final_residual_std": 0.003885348823025638,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        0.7171331600695603,
+        0.7171197003011427,
+        0.7171197002869076
+      ],
+      "std_residual_trajectory": [
+        0.0038854999680608833,
+        0.0038853488234056265,
+        0.003885348823025638
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 10,
+      "rank": 16,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.01232973500736989,
+      "wall_clock_seconds_std": 0.0005814427780217495,
+      "final_residual_mean": 1.4314612139835625,
+      "final_residual_std": 0.003845348467399033,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        1.4315180451685594,
+        1.431461214048289,
+        1.431461213983562
+      ],
+      "std_residual_trajectory": [
+        0.003845417106147243,
+        0.0038453484678710047,
+        0.0038453484673990324
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 10,
+      "rank": 32,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.0265413799934322,
+      "wall_clock_seconds_std": 0.0009340139745664102,
+      "final_residual_mean": 2.850061451812294,
+      "final_residual_std": 0.004891163994786175,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        2.8502937659001604,
+        2.850061452108579,
+        2.8500614518122935
+      ],
+      "std_residual_trajectory": [
+        0.004892495074501615,
+        0.004891163997411099,
+        0.004891163994786175
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 20,
+      "rank": 8,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.0163469800085295,
+      "wall_clock_seconds_std": 0.0008121727239713388,
+      "final_residual_mean": 1.5174691833071683,
+      "final_residual_std": 0.004636054184021312,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        1.5175001786576219,
+        1.517469183316032,
+        1.5174691833071683
+      ],
+      "std_residual_trajectory": [
+        0.004636307881016855,
+        0.00463605418399156,
+        0.004636054184021312
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 20,
+      "rank": 16,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.025539720003143883,
+      "wall_clock_seconds_std": 0.0007631612260777826,
+      "final_residual_mean": 3.0288018880417096,
+      "final_residual_std": 0.005989659465709352,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        3.0289352279905235,
+        3.0288018880850043,
+        3.0288018880417096
+      ],
+      "std_residual_trajectory": [
+        0.005989894406695064,
+        0.005989659465725693,
+        0.005989659465709352
+      ]
+    },
+    {
+      "sigma": 0.1,
+      "num_adapters": 20,
+      "rank": 32,
+      "dimension": 1536,
+      "tol": 1e-06,
+      "num_trials": 20,
+      "iterations_mean": 3.0,
+      "iterations_std": 0.0,
+      "iterations_min": 3.0,
+      "iterations_max": 3.0,
+      "wall_clock_seconds_mean": 0.05365083499636967,
+      "wall_clock_seconds_std": 0.0016253478278091115,
+      "final_residual_mean": 6.0205292141219715,
+      "final_residual_std": 0.008318205491712092,
+      "all_monotone_nonincreasing": true,
+      "mean_residual_trajectory": [
+        6.021078981775788,
+        6.020529214344975,
+        6.0205292141219715
+      ],
+      "std_residual_trajectory": [
+        0.008319604580535895,
+        0.008318205492385542,
+        0.008318205491712092
+      ]
+    }
+  ],
+  "fast_convergence_check": {
+    "description": "All sweep configurations should converge in <= 10 iterations.",
+    "passed": true
+  }
+}

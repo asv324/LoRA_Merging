@@ -1,0 +1,165 @@
+{
+  "step": "step_4_1_experiment_11_vary_N",
+  "tasks_all": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "adapters_dir": "/home/md2503/av735/LoRA_Merging/adapters",
+  "results_root": "/home/md2503/av735/LoRA_Merging/results/ablation_N",
+  "majority_sign_method": "total",
+  "eval_batch_size": 32,
+  "max_eval_samples": null,
+  "best_hparams_path": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+  "N_5_source": {
+    "source_root": "/home/md2503/av735/LoRA_Merging/results/best_hparams.json",
+    "rationale": "N=5 is sourced from the restored-head Week 3 argmax rows in results/best_hparams.json so the ablation stays aligned with the authoritative restored-head operating points."
+  },
+  "methods": [
+    {
+      "alias": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "merge_script": "merge_gpa_ties.py",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "b_weight_alpha": 0.0,
+      "normalise_a_factors": false,
+      "scale_aware_ties": false
+    },
+    {
+      "alias": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "merge_script": "merge_gpa_ties.py",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "b_weight_alpha": 0.5,
+      "normalise_a_factors": true,
+      "scale_aware_ties": true
+    },
+    {
+      "alias": "ties",
+      "display_name": "TIES-Merging",
+      "merge_script": "merge_ties.py",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "b_weight_alpha": 0.0,
+      "normalise_a_factors": false,
+      "scale_aware_ties": false
+    },
+    {
+      "alias": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "merge_script": "merge_lr_knots.py",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "b_weight_alpha": 0.0,
+      "normalise_a_factors": false,
+      "scale_aware_ties": false
+    }
+  ],
+  "subsets_by_N": {
+    "2": [
+      [
+        "mnli",
+        "sst2"
+      ],
+      [
+        "qnli",
+        "sst2"
+      ],
+      [
+        "cola",
+        "sst2"
+      ],
+      [
+        "rte",
+        "sst2"
+      ],
+      [
+        "mnli",
+        "qnli"
+      ],
+      [
+        "cola",
+        "mnli"
+      ],
+      [
+        "mnli",
+        "rte"
+      ],
+      [
+        "cola",
+        "qnli"
+      ],
+      [
+        "qnli",
+        "rte"
+      ],
+      [
+        "cola",
+        "rte"
+      ]
+    ],
+    "3": [
+      [
+        "mnli",
+        "rte",
+        "sst2"
+      ],
+      [
+        "mnli",
+        "qnli",
+        "rte"
+      ],
+      [
+        "cola",
+        "mnli",
+        "rte"
+      ],
+      [
+        "cola",
+        "qnli",
+        "sst2"
+      ],
+      [
+        "cola",
+        "mnli",
+        "qnli"
+      ]
+    ],
+    "4": [
+      [
+        "cola",
+        "mnli",
+        "qnli",
+        "sst2"
+      ],
+      [
+        "mnli",
+        "qnli",
+        "rte",
+        "sst2"
+      ],
+      [
+        "cola",
+        "mnli",
+        "rte",
+        "sst2"
+      ],
+      [
+        "cola",
+        "qnli",
+        "rte",
+        "sst2"
+      ],
+      [
+        "cola",
+        "mnli",
+        "qnli",
+        "rte"
+      ]
+    ]
+  }
+}

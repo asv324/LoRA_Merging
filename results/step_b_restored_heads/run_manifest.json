@@ -1,0 +1,60 @@
+{
+  "step": "week3_step3_3_statistical_significance_low_storage",
+  "best_hparams_path": "results/best_hparams.json",
+  "tasks": [
+    "sst2",
+    "mnli",
+    "qnli",
+    "cola",
+    "rte"
+  ],
+  "seeds": [
+    42
+  ],
+  "method_aliases": [
+    "task_arithmetic",
+    "ties",
+    "dare_ties",
+    "lr_knots",
+    "gpa_baseline",
+    "gpa_dgpa_ties",
+    "gpa_dgpa_saties",
+    "gpa_dgpa_saties_wb_0p5",
+    "gpa_dgpa_saties_wb_1p0"
+  ],
+  "adapters_seed_template": "adapters",
+  "results_root": "results/step_b_restored_heads",
+  "temporary_merged_root": "merged_adapters/step_b_tmp",
+  "evaluation_cache_root": "/home/md2503/av735/LoRA_Merging/.cache/hf_eval",
+  "runtime": {
+    "train_missing_adapters": false,
+    "majority_sign_method": "total",
+    "eval_batch_size": 32,
+    "max_eval_samples": null,
+    "skip_existing": false,
+    "delete_after_eval": true,
+    "model_name": "Qwen/Qwen2.5-1.5B",
+    "warmup_eval_cache": true,
+    "local_files_only": false,
+    "lambda_overrides": "gpa_dgpa_saties_wb_0p5=0.25",
+    "comparison_baselines": [
+      "task_arithmetic",
+      "ties",
+      "gpa_baseline"
+    ]
+  },
+  "result_file_count": 11,
+  "result_files": [
+    "seed_42/dare_ties.json",
+    "seed_42/gpa_baseline.json",
+    "seed_42/gpa_dgpa_saties.json",
+    "seed_42/gpa_dgpa_saties_wb_0p5.json",
+    "seed_42/gpa_dgpa_saties_wb_1p0.json",
+    "seed_42/gpa_dgpa_ties.json",
+    "seed_42/lr_knots.json",
+    "seed_42/task_arithmetic.json",
+    "seed_42/ties.json",
+    "seed_variance.json",
+    "summary.json"
+  ]
+}

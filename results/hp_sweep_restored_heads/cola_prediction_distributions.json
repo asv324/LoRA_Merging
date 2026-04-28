@@ -1,0 +1,6223 @@
+{
+  "source_root": "/home/md2503/av735/LoRA_Merging/results/hp_sweep_restored_heads",
+  "record_count": 340,
+  "prediction_distribution_available": true,
+  "summary_by_method": {
+    "task_arithmetic": {
+      "prediction_distribution_available": true,
+      "record_count": 10,
+      "available_record_count": 10,
+      "non_degenerate_lambda_threshold": 0.1,
+      "non_degenerate_source_path": "task_arithmetic/lambda_0p1.json",
+      "best_cola_metric": 0.37221974578357636,
+      "best_cola_metric_source_path": "task_arithmetic/lambda_0p4.json",
+      "rerun_required": false
+    },
+    "ties": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.1,
+      "non_degenerate_source_path": "ties/trim_10/lambda_0p1.json",
+      "best_cola_metric": 0.09160029311186252,
+      "best_cola_metric_source_path": "ties/trim_10/lambda_0p2.json",
+      "rerun_required": false
+    },
+    "dare_ties": {
+      "prediction_distribution_available": true,
+      "record_count": 120,
+      "available_record_count": 120,
+      "non_degenerate_lambda_threshold": 0.1,
+      "non_degenerate_source_path": "dare_ties/drop_0/trim_10/lambda_0p1.json",
+      "best_cola_metric": 0.10107663573596408,
+      "best_cola_metric_source_path": "dare_ties/drop_0p5/trim_10/lambda_0p1.json",
+      "rerun_required": false
+    },
+    "lr_knots": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "lr_knots/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.14816313857262692,
+      "best_cola_metric_source_path": "lr_knots/trim_30/lambda_1.json",
+      "rerun_required": false
+    },
+    "gpa_baseline": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "gpa_ties/baseline/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.17676596574736192,
+      "best_cola_metric_source_path": "gpa_ties/baseline/trim_30/lambda_1.json",
+      "rerun_required": false
+    },
+    "gpa_dgpa_ties": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.16909594952099252,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_ties/trim_20/lambda_1.json",
+      "rerun_required": false
+    },
+    "gpa_dgpa_saties": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.18752625369677187,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_saties/trim_20/lambda_1.json",
+      "rerun_required": false
+    },
+    "gpa_dgpa_saties_wb_0p5": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.23315645673745972,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_1.json",
+      "rerun_required": false
+    },
+    "gpa_dgpa_saties_wb_1p0": {
+      "prediction_distribution_available": true,
+      "record_count": 30,
+      "available_record_count": 30,
+      "non_degenerate_lambda_threshold": 0.05,
+      "non_degenerate_source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p05.json",
+      "best_cola_metric": 0.2770879885953823,
+      "best_cola_metric_source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_1.json",
+      "rerun_required": false
+    }
+  },
+  "records": [
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.07725142769147965,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        661,
+        382
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6337488015340365,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.09160029311186252,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        670,
+        373
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6423777564717162,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.08614150124876403,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        681,
+        362
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6529242569511026,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05563289778050365,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        701,
+        342
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6720997123681688,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.0610901895385116,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        717,
+        326
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6874400767018217,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06326349104688761,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        739,
+        304
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7085330776605945,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.0681099526831822,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        749,
+        294
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7181208053691275,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06295672622509231,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        763,
+        280
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7315436241610739,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.07275902368956087,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        773,
+        270
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7411313518696069,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_10/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": 0.0,
+      "cola_metric": 0.07000298502259486,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        775,
+        268
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7430488974113135,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.07467472213358103,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        663,
+        380
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6356663470757431,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.08871941307464497,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        679,
+        364
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6510067114093959,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06137291301928956,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        700,
+        343
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6711409395973155,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06073202804801692,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        724,
+        319
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6941514860977949,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05326531570519206,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        743,
+        300
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7123681687440077,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.055824763714348066,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        758,
+        285
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7267497603068073,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.051869085107432635,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        771,
+        272
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7392138063279002,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05520156945785764,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        789,
+        254
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7564717162032598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06266732398381333,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        794,
+        249
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7612655800575263,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_20/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": 0.0,
+      "cola_metric": 0.06627696080247947,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        788,
+        255
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7555129434324065,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.08226495478644037,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        684,
+        359
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6558005752636625,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.07299572204486264,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        708,
+        335
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6788111217641419,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05427124866073564,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        749,
+        294
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7181208053691275,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05687807248948961,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        781,
+        262
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7488015340364333,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.05819692104101288,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        804,
+        239
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7708533077660594,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.03841996883466955,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        831,
+        212
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7967401725790988,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.037719509704803825,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        845,
+        198
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8101629913710451,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.04431493881415232,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        851,
+        192
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8159156279961649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.04880991884127535,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        855,
+        188
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8197507190795782,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0/trim_30/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": 0.0,
+      "cola_metric": 0.0687662159229228,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        849,
+        194
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8139980824544583,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07508203749207462,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        656,
+        387
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6289549376797698,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.0911199701463349,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        667,
+        376
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6395014381591563,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.08072849596711582,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        665,
+        378
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6375838926174496,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06042340406801625,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        684,
+        359
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6558005752636625,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06616542491837271,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        693,
+        350
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6644295302013423,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.061458997568869946,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        710,
+        333
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6807286673058485,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07106900925806256,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        723,
+        320
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6931927133269415,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06759258309499201,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        729,
+        314
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6989453499520614,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06759258309499201,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        729,
+        314
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6989453499520614,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_10/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": 0.1,
+      "cola_metric": 0.08006967426397105,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        723,
+        320
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6931927133269415,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07989952587510532,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        669,
+        374
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6414189837008629,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.09129234002585987,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        677,
+        366
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6490891658676894,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.0573748334668903,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        693,
+        350
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6644295302013423,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.05661284657676136,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        717,
+        326
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6874400767018217,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.054991701427138176,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        735,
+        308
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7046979865771812,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.059410338527147506,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        752,
+        291
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7209971236816874,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.05635515730462923,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        761,
+        282
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7296260786193672,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07037338508157373,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        761,
+        282
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7296260786193672,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07522193966476773,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        754,
+        289
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7229146692233941,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_20/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06730756595599882,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        753,
+        290
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7219558964525408,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07824640780349434,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        677,
+        366
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6490891658676894,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.07020824059404718,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        700,
+        343
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6711409395973155,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.053541038545643266,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        726,
+        317
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6960690316395014,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.0711567068584472,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        757,
+        286
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.725790987535954,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06166341003942408,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        781,
+        262
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7488015340364333,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.05901330359679132,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        800,
+        243
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7670182166826462,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.049226459237096266,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        817,
+        226
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7833173537871524,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.0557303200437467,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        816,
+        227
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7823585810162992,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06075988860008726,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        816,
+        227
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7823585810162992,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p1/trim_30/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": 0.1,
+      "cola_metric": 0.06949577029749485,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        803,
+        240
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7698945349952061,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.10107663573596408,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        639,
+        404
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6126558005752637,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.0891693683115113,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        615,
+        428
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5896452540747843,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.061993715272745824,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        600,
+        443
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5752636625119847,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05277315233034948,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05712024567086212,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        532,
+        511
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5100671140939598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05607236610252447,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        494,
+        549
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5263662511984659,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05609333128805237,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        449,
+        594
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5695110258868649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06687346034546983,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        409,
+        634
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6078619367209971,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06511758049441031,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_10/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": 0.5,
+      "cola_metric": 0.07371910486822869,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.10107663573596408,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        639,
+        404
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6126558005752637,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.0891693683115113,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        615,
+        428
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5896452540747843,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.061993715272745824,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        600,
+        443
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5752636625119847,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05277315233034948,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05712024567086212,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        532,
+        511
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5100671140939598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05607236610252447,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        494,
+        549
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5263662511984659,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05609333128805237,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        449,
+        594
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5695110258868649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06687346034546983,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        409,
+        634
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6078619367209971,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06511758049441031,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_20/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": 0.5,
+      "cola_metric": 0.07371910486822869,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.10107663573596408,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        639,
+        404
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6126558005752637,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.0891693683115113,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        615,
+        428
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5896452540747843,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.061993715272745824,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        600,
+        443
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5752636625119847,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05277315233034948,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05712024567086212,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        532,
+        511
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5100671140939598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05607236610252447,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        494,
+        549
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5263662511984659,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.05609333128805237,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        449,
+        594
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5695110258868649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06687346034546983,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        409,
+        634
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6078619367209971,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.06511758049441031,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p5/trim_30/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": 0.5,
+      "cola_metric": 0.07371910486822869,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        385,
+        658
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6308724832214765,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": 0.04662208839219102,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        891,
+        152
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8542665388302972,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": 0.034374892427707776,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        674,
+        369
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6462128475551294,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.00499402484257167,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        493,
+        550
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5273250239693192,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.04879640603324588,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        665,
+        378
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6375838926174496,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": 0.01192560097730293,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        616,
+        427
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5906040268456376,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": 0.03173752916022959,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        617,
+        426
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5915627996164909,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.002417914623071988,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0526839876827179,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        652,
+        391
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6251198465963567,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0031858528852892554,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        647,
+        396
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6203259827420902,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_10/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": 0.9,
+      "cola_metric": -0.007664634755781014,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        631,
+        412
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6049856184084372,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": 0.04662208839219102,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        891,
+        152
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8542665388302972,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": 0.034374892427707776,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        674,
+        369
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6462128475551294,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.00499402484257167,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        493,
+        550
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5273250239693192,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.04879640603324588,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        665,
+        378
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6375838926174496,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": 0.01192560097730293,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        616,
+        427
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5906040268456376,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": 0.03173752916022959,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        617,
+        426
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5915627996164909,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.002417914623071988,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0526839876827179,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        652,
+        391
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6251198465963567,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0031858528852892554,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        647,
+        396
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6203259827420902,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_20/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": 0.9,
+      "cola_metric": -0.007664634755781014,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        631,
+        412
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6049856184084372,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": 0.04662208839219102,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        891,
+        152
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8542665388302972,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p2.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": 0.034374892427707776,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        674,
+        369
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6462128475551294,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p3.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.00499402484257167,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        493,
+        550
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5273250239693192,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p4.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.04879640603324588,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        665,
+        378
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6375838926174496,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p5.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": 0.01192560097730293,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        616,
+        427
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5906040268456376,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p6.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.6,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": 0.03173752916022959,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        617,
+        426
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5915627996164909,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p7.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.002417914623071988,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p8.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.8,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0526839876827179,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        652,
+        391
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6251198465963567,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_0p9.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 0.9,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.0031858528852892554,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        647,
+        396
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6203259827420902,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "dare_ties/drop_0p9/trim_30/lambda_1.json",
+      "method_key": "dare_ties",
+      "display_name": "DARE + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": 0.9,
+      "cola_metric": -0.007664634755781014,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        631,
+        412
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6049856184084372,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p05.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.05139446476422605,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        628,
+        415
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6021093000958773,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.05616247527976171,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        621,
+        422
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5953978906999041,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p15.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07484515345007542,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        613,
+        430
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5877277085330777,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p2.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.09171007271519638,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        613,
+        430
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5877277085330777,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p25.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.10732286325268978,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        604,
+        439
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5790987535953979,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p3.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.13126732344624234,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        595,
+        448
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5704697986577181,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p4.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.13759496230041932,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        580,
+        463
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5560882070949185,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p5.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.12660755038552066,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        559,
+        484
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.535953978906999,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_0p7.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1504630861573929,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        511,
+        532
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5100671140939598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_10/lambda_1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1635767807577637,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        469,
+        574
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5503355704697986,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p05.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05268209272858025,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05321931464239888,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        620,
+        423
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5944391179290508,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p15.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.07612053349754375,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        612,
+        431
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5867689357622243,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p2.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.09551724725908714,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        610,
+        433
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5848513902205177,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p25.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.11657636367424976,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        600,
+        443
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5752636625119847,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p3.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12540254215593338,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        593,
+        450
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5685522531160115,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p4.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.1338987777525224,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        573,
+        470
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5493767976989453,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p5.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.1284355044726694,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        551,
+        492
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5282837967401726,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_0p7.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.15017647571432247,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        508,
+        535
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5129434324065196,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_20/lambda_1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.16124849033453723,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        455,
+        588
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5637583892617449,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p05.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05268209272858025,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05616247527976171,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        621,
+        422
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5953978906999041,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p15.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.07866957653804069,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        610,
+        433
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5848513902205177,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p2.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.0921740407978954,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        606,
+        437
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5810162991371045,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p25.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.1170217488026102,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        593,
+        450
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5685522531160115,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p3.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.13044143913616793,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        589,
+        454
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5647171620325983,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p4.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.13313910938493648,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        567,
+        476
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5436241610738255,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p5.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.1299552618212634,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        540,
+        503
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5177372962607862,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_0p7.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.15377163715781078,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        502,
+        541
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5186960690316395,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/baseline/trim_30/lambda_1.json",
+      "method_key": "gpa_baseline",
+      "display_name": "GPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.17676596574736192,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        431,
+        612
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5867689357622243,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.048443630624607006,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.05284865346770373,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        617,
+        426
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5915627996164909,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07407355227943974,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        607,
+        436
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5819750719079578,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.09392208230783813,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        598,
+        445
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.573346116970278,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.11077583101888432,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        588,
+        455
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5637583892617449,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.12924058194884536,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        580,
+        463
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5560882070949185,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.11864290328167454,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        562,
+        481
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.538830297219559,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.12962429580100976,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        537,
+        506
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5148609779482263,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1527172006977079,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        490,
+        553
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5302013422818792,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_10/lambda_1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.17853288082624105,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        439,
+        604
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5790987535953979,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.04973213308804458,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.055415831624524486,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        615,
+        428
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5896452540747843,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.07955480764731064,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        606,
+        437
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5810162991371045,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.0880706382134416,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        596,
+        447
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5714285714285714,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.11456838737146209,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        585,
+        458
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5608820709491851,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12138513492262956,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        573,
+        470
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5493767976989453,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12589680050207608,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        553,
+        490
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5302013422818792,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12578535159337495,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        527,
+        516
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5052732502396932,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.1532866339622767,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        480,
+        563
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5397890699904123,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_20/lambda_1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.18752625369677187,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        417,
+        626
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05230665573650065,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        624,
+        419
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5982742090124641,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05798023418495445,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        613,
+        430
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5877277085330777,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.08210029759866647,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        604,
+        439
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5790987535953979,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09899319598929604,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        594,
+        449
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5695110258868649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12253850047649177,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        582,
+        461
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5580057526366251,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12227508524404128,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        569,
+        474
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5455417066155321,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.11782760429247711,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        543,
+        500
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5206136145733461,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12199422527495116,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        517,
+        526
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5043144774688398,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.16093920383147922,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        471,
+        572
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.548418024928092,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties/trim_30/lambda_1.json",
+      "method_key": "gpa_dgpa_saties",
+      "display_name": "dGPA + saTIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.17131545502716589,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        392,
+        651
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6241610738255033,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.04549537618117286,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.04754339268736776,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        608,
+        435
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5829338446788112,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07002025082562577,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        597,
+        446
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5723873441994247,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.08402379262225054,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        586,
+        457
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5618408437200384,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.10107491116957182,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        566,
+        477
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5426653883029722,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.10001895693074392,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        557,
+        486
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5340364333652924,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1184418077607741,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        536,
+        507
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.513902205177373,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1262673375189374,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        504,
+        539
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5167785234899329,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.15401938163271192,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        451,
+        592
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5675934803451582,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_10/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.23315645673745972,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        373,
+        670
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6423777564717162,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.04678473276490552,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.04882698127760248,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        607,
+        436
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5819750719079578,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06965250163952742,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        594,
+        449
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5695110258868649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.08492711820618382,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        582,
+        461
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5580057526366251,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.09782590776946362,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        562,
+        481
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.538830297219559,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.10764809390735577,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        551,
+        492
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5282837967401726,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12291356974493822,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        526,
+        517
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5043144774688398,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.14414604151537042,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        487,
+        556
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5330776605944392,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.16983356659739435,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        433,
+        610
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5848513902205177,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_20/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.2278850654151821,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        359,
+        684
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6558005752636625,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.04678473276490552,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05175252252124642,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        608,
+        435
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5829338446788112,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.07474962213494507,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        590,
+        453
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5656759348034516,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09254923397253419,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        576,
+        467
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5522531160115053,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09585848105618199,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        557,
+        486
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5340364333652924,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.10824510852742261,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        544,
+        499
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5215723873441994,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12772987565684524,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        519,
+        524
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5023969319271333,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.15043152442704508,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        479,
+        564
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5407478427612655,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.19161148198351313,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        411,
+        632
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6059443911792906,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_0p5/trim_30/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_0p5",
+      "display_name": "dGPA + saTIES + wB(0.5)",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.23019289694771214,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        343,
+        700
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6711409395973155,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.048073254484605706,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        624,
+        419
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5982742090124641,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.0429821002303273,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        605,
+        438
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5800575263662512,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.06254659200600939,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        593,
+        450
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5685522531160115,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.08420187570261434,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        576,
+        467
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5522531160115053,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.09620508678719783,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        560,
+        483
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5369127516778524,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.11400892303697455,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        546,
+        497
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5234899328859061,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1207109392752145,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        518,
+        525
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5033557046979866,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1535258876255631,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        483,
+        560
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5369127516778524,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1851955157221921,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        431,
+        612
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5867689357622243,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_10/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.24856955726987284,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        354,
+        689
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.660594439117929,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.045129206815094365,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        623,
+        420
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5973154362416108,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.045550170209454295,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        603,
+        440
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5781399808245445,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06928774664554138,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        591,
+        452
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5666347075743049,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.08674441403415814,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        574,
+        469
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5503355704697986,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.10383316680759036,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        554,
+        489
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5311601150527325,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.11749494392463006,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        540,
+        503
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5177372962607862,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.11824672713622696,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        507,
+        536
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.513902205177373,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.17103104242769826,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        476,
+        567
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5436241610738255,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.19453630184288442,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        415,
+        628
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6021093000958773,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_20/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.27180815890197,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        339,
+        704
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6749760306807286,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p05.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.0392484604911119,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        621,
+        422
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5953978906999041,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.048115790165567905,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        601,
+        442
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.576222435282838,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p15.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.07147496692824921,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        586,
+        457
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5618408437200384,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p2.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09020097212727506,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        568,
+        475
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5445829338446788,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p25.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.10187874676936286,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        549,
+        494
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5263662511984659,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p3.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.11396646753748425,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        533,
+        510
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5110258868648131,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p4.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.1340211424624086,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        498,
+        545
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5225311601150527,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p5.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.1644884758606961,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        462,
+        581
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_0p7.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.19844973405117713,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        391,
+        652
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6251198465963567,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_saties_wb_1p0/trim_30/lambda_1.json",
+      "method_key": "gpa_dgpa_saties_wb_1p0",
+      "display_name": "dGPA + saTIES + wB(1.0)",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.2770879885953823,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        319,
+        724
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6941514860977949,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p05.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.04973213308804458,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.054503902913384784,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        619,
+        424
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5934803451581975,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p15.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07651179205389125,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        615,
+        428
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5896452540747843,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p2.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.09297963344720413,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        612,
+        431
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5867689357622243,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p25.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.10858709306897774,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        603,
+        440
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5781399808245445,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p3.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.12288197245224872,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        595,
+        448
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5704697986577181,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p4.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.13215720878476997,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p5.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.13239885544677357,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        561,
+        482
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5378715244487057,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_0p7.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.1466033586611458,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        514,
+        529
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5071907957813998,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_10/lambda_1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.15878362397355095,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        460,
+        583
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5589645254074784,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p05.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05230665573650065,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        624,
+        419
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5982742090124641,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.057446221828815425,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        620,
+        423
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5944391179290508,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p15.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.08033530848495885,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        612,
+        431
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5867689357622243,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p2.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.09384382086003308,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        608,
+        435
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5829338446788112,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p25.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.10990539664152445,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        592,
+        451
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5675934803451582,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p3.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.1245920778072062,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        587,
+        456
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5627996164908916,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p4.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12644323617091432,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        569,
+        474
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5455417066155321,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p5.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12901857732003721,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        544,
+        499
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5215723873441994,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_0p7.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.15635996329205196,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        500,
+        543
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5206136145733461,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_20/lambda_1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.16909594952099252,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        446,
+        597
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5723873441994247,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p05.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05101980274180159,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.048992407455982344,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        620,
+        423
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5944391179290508,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p15.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.08709341189856391,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        610,
+        433
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5848513902205177,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p2.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09511236144763745,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        607,
+        436
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5819750719079578,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p25.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.11116958944548325,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        591,
+        452
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5666347075743049,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p3.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.1279791005503268,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p4.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.11701600132159458,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        560,
+        483
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5369127516778524,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p5.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12547163614193635,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        537,
+        506
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5148609779482263,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_0p7.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.15141607223593065,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        491,
+        552
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5292425695110259,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "gpa_ties/dgpa_ties/trim_30/lambda_1.json",
+      "method_key": "gpa_dgpa_ties",
+      "display_name": "dGPA + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.16384817471351798,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        425,
+        618
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5925215723873442,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p05.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.043280967264057106,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        631,
+        412
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6049856184084372,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.05048258473561466,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        632,
+        411
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6059443911792906,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p15.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.058589844982618544,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        629,
+        414
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6030680728667306,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p2.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.06115901693652675,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p25.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.06963594114447325,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        627,
+        416
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6011505273250239,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p3.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07219515262628191,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p4.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.08999050485706134,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        621,
+        422
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5953978906999041,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p5.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.11365850305767232,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        619,
+        424
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5934803451581975,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_0p7.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.11446841663441074,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        605,
+        438
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5800575263662512,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_10/lambda_1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.13593877461784332,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        578,
+        465
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5541706615532119,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p05.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.04623532040720891,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        632,
+        411
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6059443911792906,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05177190093403012,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        631,
+        412
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6049856184084372,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p15.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05640308494155028,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        634,
+        409
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6078619367209971,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p2.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.0670737000870016,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        629,
+        414
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6030680728667306,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p25.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.07515267452927492,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p3.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.08448880322454268,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        622,
+        421
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5963566634707574,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p4.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.10607571244145043,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p5.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.11662292243864703,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        620,
+        423
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5944391179290508,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_0p7.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.12204842090770832,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        609,
+        434
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5838926174496645,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_20/lambda_1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.14469153348809954,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        581,
+        462
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5570469798657718,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p05.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.05,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.049192374673072005,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        633,
+        410
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6069031639501438,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05344145515207938,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        633,
+        410
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6069031639501438,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p15.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.15,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.06322437772083192,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        632,
+        411
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6059443911792906,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p2.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.07259539292001144,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        628,
+        415
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6021093000958773,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p25.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.25,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.08362618834301835,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p3.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.09633645906363353,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        626,
+        417
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6001917545541706,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p4.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.11454585239524256,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        625,
+        418
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5992329817833174,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p5.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12210916022114197,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        619,
+        424
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5934803451581975,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_0p7.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.12959940068881887,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        603,
+        440
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5781399808245445,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "lr_knots/trim_30/lambda_1.json",
+      "method_key": "lr_knots",
+      "display_name": "LR-KnOTS + TIES",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.14816313857262692,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        565,
+        478
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5417066155321189,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p1.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.1,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.21702086316877442,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        402,
+        641
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6145733461169702,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p2.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.2,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.3460476883865242,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        264,
+        779
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.7468839884947267,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p3.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.3,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.3690572095093317,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        233,
+        810
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.7766059443911792,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p4.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.4,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.37221974578357636,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        241,
+        802
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.7689357622243528,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p5.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.5,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.34172827201144684,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        297,
+        746
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.7152444870565676,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p6.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.6,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.30933034592328235,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        360,
+        683
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.6548418024928092,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p7.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.7,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.28271616021380147,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        458,
+        585
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 1,
+      "dominant_fraction": 0.5608820709491851,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p8.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.8,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.2553227202359713,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        576,
+        467
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.5522531160115053,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_0p9.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 0.9,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.21934384536834162,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        679,
+        364
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6510067114093959,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "task_arithmetic/lambda_1.json",
+      "method_key": "task_arithmetic",
+      "display_name": "Task Arithmetic",
+      "lambda": 1.0,
+      "trim_percentage": null,
+      "drop_probability": null,
+      "cola_metric": 0.1930923588301401,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        760,
+        283
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7286673058485139,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.1,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07725142769147965,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        661,
+        382
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6337488015340365,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p2.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.2,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.09160029311186252,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        670,
+        373
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6423777564717162,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p3.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.3,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.08614150124876403,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        681,
+        362
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6529242569511026,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p4.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.4,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.05563289778050365,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        701,
+        342
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6720997123681688,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p5.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.5,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.0610901895385116,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        717,
+        326
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6874400767018217,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p6.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.6,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.06326349104688761,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        739,
+        304
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7085330776605945,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p7.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.7,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.0681099526831822,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        749,
+        294
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7181208053691275,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p8.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.8,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.06295672622509231,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        763,
+        280
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7315436241610739,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_0p9.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.9,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07275902368956087,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        773,
+        270
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7411313518696069,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_10/lambda_1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 1.0,
+      "trim_percentage": 10,
+      "drop_probability": null,
+      "cola_metric": 0.07000298502259486,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        775,
+        268
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7430488974113135,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.1,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.07467472213358103,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        663,
+        380
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6356663470757431,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p2.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.2,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.08871941307464497,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        679,
+        364
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6510067114093959,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p3.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.3,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06137291301928956,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        700,
+        343
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6711409395973155,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p4.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.4,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06073202804801692,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        724,
+        319
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6941514860977949,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p5.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.5,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05326531570519206,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        743,
+        300
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7123681687440077,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p6.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.6,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.055824763714348066,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        758,
+        285
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7267497603068073,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p7.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.7,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.051869085107432635,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        771,
+        272
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7392138063279002,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p8.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.8,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.05520156945785764,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        789,
+        254
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7564717162032598,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_0p9.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.9,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06266732398381333,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        794,
+        249
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7612655800575263,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_20/lambda_1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 1.0,
+      "trim_percentage": 20,
+      "drop_probability": null,
+      "cola_metric": 0.06627696080247947,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        788,
+        255
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7555129434324065,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.1,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.08226495478644037,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        684,
+        359
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6558005752636625,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p2.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.2,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.07299572204486264,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        708,
+        335
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.6788111217641419,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p3.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.3,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05427124866073564,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        749,
+        294
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7181208053691275,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p4.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.4,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05687807248948961,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        781,
+        262
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7488015340364333,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p5.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.5,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.05819692104101288,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        804,
+        239
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7708533077660594,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p6.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.6,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.03841996883466955,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        831,
+        212
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.7967401725790988,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p7.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.7,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.037719509704803825,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        845,
+        198
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8101629913710451,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p8.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.8,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.04431493881415232,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        851,
+        192
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8159156279961649,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_0p9.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 0.9,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.04880991884127535,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        855,
+        188
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8197507190795782,
+      "degenerate_prediction": false
+    },
+    {
+      "source_path": "ties/trim_30/lambda_1.json",
+      "method_key": "ties",
+      "display_name": "TIES-Merging",
+      "lambda": 1.0,
+      "trim_percentage": 30,
+      "drop_probability": null,
+      "cola_metric": 0.0687662159229228,
+      "prediction_distribution_available": true,
+      "class_counts": [
+        849,
+        194
+      ],
+      "total_predictions": 1043,
+      "dominant_class": 0,
+      "dominant_fraction": 0.8139980824544583,
+      "degenerate_prediction": false
+    }
+  ],
+  "notes": [
+    "Runs created before prediction-distribution logging was added will report prediction_distribution_available=false.",
+    "For methods without available class counts, rerun CoLA evaluation is required to compute a true non-degenerate lambda threshold."
+  ]
+}
