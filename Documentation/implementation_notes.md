@@ -567,3 +567,11 @@ $PYTHON_BIN scripts/assemble_enhancement_ablation.py \
   --results-root /home/md2503/av735/LoRA_Merging/results/ablation_enhancement \
   --figure-path /home/md2503/av735/LoRA_Merging/dissertation/chapters/figures/ablation_enhancement.pdf
 ```
+
+## 2026-05-01 - Added subset repository README
+
+Change: Added a concise top-level `README.md` for a GitHub repository containing the documented subset of this project: `Documentation/`, `dissertation/`, `logs/`, `results/`, `scripts/`, `tests/`, `Dockerfile`, and `test.py`.
+
+Why: The subset repository needs a short orientation document that explains what the artifacts are, how to use the Docker environment, and which commands are useful without implying that large trained adapter directories are included.
+
+Reasoning: The README focuses on purpose, layout, setup, common commands, and artifact limitations. It points users to Docker as the reproducible dependency source because this subset does not include a separate package manifest, and it explicitly notes that `adapters/` and `merged_adapters/` must be generated or supplied separately for full reruns.
